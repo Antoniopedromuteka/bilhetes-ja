@@ -10,7 +10,7 @@ const COMPONENTS = [SearchComponent];
     <header
       class="max-w-[1280px] xl:mx-auto px-2 w-full h-[64px] flex items-center justify-between"
     >
-      <div class="w-full flex max-w-[200px] items-center gap-2">
+      <div class="w-full flex max-w-[180px] xl:max-w-[200px] items-center gap-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -32,11 +32,9 @@ const COMPONENTS = [SearchComponent];
         </svg>
         <h2 class="text-2xl font-bold">Bilhetes Já</h2>
       </div>
-      <div class="w-full flex justify-between xl:justify-end items-center xl:gap-5 gap-3">
-        <div class="xl:max-w-[320px] max-w-[70%] w-full">
-          <app-search></app-search>
-        </div>
-          <button class="flex max-w-[170px] w-full items-center gap-2 border py-2 px-4 rounded-md bg-primary text-white">
+      <div class="w-full flex justify-end items-center xl:gap-5 gap-3">
+          <app-search class="hidden md:flex md:flex-1 w-full"></app-search>
+          <button class="flex w-[14rem] xl:max-w-[170px] xl:w-full items-center gap-2 border py-2 px-6 rounded-md bg-primary text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
