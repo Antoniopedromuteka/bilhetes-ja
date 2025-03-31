@@ -34,7 +34,7 @@ const COMPONENTS = [SearchComponent];
       </div>
       <div class="w-full flex justify-end items-center xl:gap-5 gap-3">
           <app-search class="hidden md:flex md:flex-1 w-full"></app-search>
-          <button class="flex w-[11rem] xl:max-w-[170px] xl:w-full items-center gap-2 border py-2 px-6 rounded-md bg-primary text-white">
+          <button class="flex w-[11rem] cursor-pointer xl:max-w-[170px] xl:w-full items-center gap-2 border py-2 px-6 rounded-md bg-primary text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

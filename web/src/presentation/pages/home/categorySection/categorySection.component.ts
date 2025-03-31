@@ -7,7 +7,7 @@ const COMPONENTS = [CardCategoryComponent]
   selector: 'app-category-section',
   imports: [...COMPONENTS],
   template: `
-    <main class="w-full px-3 xl:px-0 h-auto bg-gray-200">
+    <main class="w-full px-3 xl:px-0 h-auto bg-gray-100">
       <h3 class="text-center font-bold text-3xl pt-12">Categorias</h3>
       <section class="w-full h-auto grid xl:grid-cols-4 md:grid-cols-4 grid-cols-2 mt-8 pb-20 gap-4">
         @for (item of cards; track $index) {
