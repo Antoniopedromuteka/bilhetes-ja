@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   imports: [],
   template: `
     <div
-      class="xl:max-w-[200px] w-full h-[150px] bg-secondary border border-gray-200 rounded-md flex items-center justify-center flex-col"
+      class="xl:max-w-[300px] w-full h-[150px] bg-secondary border border-gray-200 rounded-md flex items-center justify-center flex-col"
     >
       <span class="text-primary">{{ cardItem.icon }}</span>
       <div>{{ cardItem.title }}</div>

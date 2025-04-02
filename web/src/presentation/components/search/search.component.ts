@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [],
   template: `
     <div
-      class="w-full border p-2 flex items-center gap-2 rounded-md border-gray-200"
+      class="w-full xl:w-1/3 border p-2 flex items-center gap-2 rounded-md border-gray-200"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -9,7 +9,7 @@ const COMPONENTS = [BannerComponent, CategorySectionComponent, EventSectionCompo
   selector: 'app-home',
   imports: [...COMPONENTS],
   template: `
-    <main class="w-full min-h-screen max-w-[1280px] mx-auto">
+    <main class="w-full h-[calc(100vh - 64px)] mt-[64px] min-h-screen">
       <app-banner />
       <app-category-section/>
       <app-event-section />
