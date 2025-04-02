@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CardTicketBuyComponent } from '../../../components/cardTicketBuy/cardTicketBuy.component';
 
-const COMPONENTS = [CardTicketBuyComponent]
+const COMPONENTS = [CardTicketBuyComponent];
 
 @Component({
   selector: 'app-event-details',
@@ -51,9 +51,9 @@ const COMPONENTS = [CardTicketBuyComponent]
       >
         <h3 class="text-2xl font-medium">Ingressos</h3>
         <div class="mt-4 flex flex-col gap-4">
-          <app-card-ticket-buy/>
-          <app-card-ticket-buy/>
-          </div>
+          <app-card-ticket-buy />
+          <app-card-ticket-buy />
+        </div>
       </div>
     </section>
   </main>`,
