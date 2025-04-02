@@ -20,5 +20,9 @@ export const routes: Routes = [
   {
     path: 'categories/:id',
     loadComponent: () => import('../presentation/pages/categories/categoryDetails/categoryDetails.component').then((m) => m.CategoryDetailsComponent)
+  },
+  {
+    path: 'search/:searchTerm',
+    loadComponent: () => import('../presentation/pages/search/search.component').then((m) => m.SearchComponent)
   }
 ];
