@@ -1,10 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-card-event',
-  imports: [],
+  imports: [RouterLink],
   template: `
     <section
+      routerLink="/event/3"
       class="max-w-[410px] cursor-pointer w-full h-[372px] bg-gray-50 rounded-md flex flex-col"
     >
       <div class="w-full h-[192px] bg-black rounded-t-md"></div>

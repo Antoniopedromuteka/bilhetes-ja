@@ -12,5 +12,13 @@ export const routes: Routes = [
   {
     path: 'events',
     loadComponent: () => import('../presentation/pages/event/event.component').then((m) => m.EventComponent)
+  },
+  {
+    path: 'categories',
+    loadComponent: () => import('../presentation/pages/categories/categories.component').then((m) => m.CategoriesComponent)
+  },
+  {
+    path: 'categories/:id',
+    loadComponent: () => import('../presentation/pages/categories/categoryDetails/categoryDetails.component').then((m) => m.CategoryDetailsComponent)
   }
 ];
