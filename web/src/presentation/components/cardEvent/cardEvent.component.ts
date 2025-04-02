@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [],
   template: `
     <section
-      class="max-w-[410px] w-full h-[372px] bg-gray-50 rounded-md flex flex-col"
+      class="max-w-[410px] cursor-pointer w-full h-[372px] bg-gray-50 rounded-md flex flex-col"
     >
       <div class="w-full h-[192px] bg-black rounded-t-md"></div>
       <div class="pt-8 px-3 h-auto flex flex-col gap-3">
