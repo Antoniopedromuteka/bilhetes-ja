@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { SearchComponent } from '../search/search.component';
+import { RouterLink } from '@angular/router';
 
 const COMPONENTS = [SearchComponent];
 
 @Component({
   selector: 'app-header',
-  imports: [...COMPONENTS],
+  imports: [...COMPONENTS, RouterLink],
   template: `
     <header
       class="px-2 w-full h-[64px] shadow-md shadow-gray-200 fixed top-0 right-0 left-0 w-full bg-white z-50"
@@ -35,7 +36,7 @@ const COMPONENTS = [SearchComponent];
             <path d="M13 17v2"></path>
             <path d="M13 11v2"></path>
           </svg>
-          <h2 class="text-2xl font-bold">Bilhetes Já</h2>
+          <h2 class="text-2xl font-bold cursor-pointer" routerLink="/">Bilhetes Já</h2>
         </div>
         <div class="w-full flex justify-end items-center xl:gap-5 gap-3">
           <app-search class="hidden md:flex md:flex-1 justify-end" />

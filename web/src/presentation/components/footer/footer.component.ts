@@ -107,7 +107,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           </ul>
         </div>
       </div>
-      <hr class="text-white mx-5" />
+      <hr class="text-slate-600 mx-5 h-[1px]" />
       <div class="w-full max-w-[1280px] mx-auto h-[3rem] flex items-center justify-center">
         <p class="text-slate-400 text-center">
           &copf; 2025 Bilhetes Já. Todos os direitos reservados

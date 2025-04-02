@@ -17,7 +17,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </div>
       </div>
       <button
-        class="w-full mt-4 bg-primary text-white rounded-md py-2 flex items-center justify-center gap-2"
+        class="w-full mt-4 bg-primary text-white rounded-md py-2 flex items-center justify-center gap-2 cursor-pointer"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

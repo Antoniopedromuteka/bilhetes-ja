@@ -8,9 +8,9 @@ const COMPONENTS = [CardTicketBuyComponent]
   imports: [...COMPONENTS],
   template: `<main class="w-full h-[calc(100vh-64px)] h-auto mt-[64px]">
     <section
-      class="w-full max-w-[1280px] mx-auto py-10 grid grid-cols-12 gap-6 h-auto"
+      class="w-full max-w-[1280px] px-3 xl:px-0 mx-auto py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto"
     >
-      <div class="w-full col-span-8">
+      <div class="w-full col-span-full lg:col-span-8">
         <div class="w-full h-[400px] bg-black rounded-md"></div>
         <div class="flex flex-col gap-4">
           <h3 class="text-2xl font-semibold mt-8">Festival de Verão 2024</h3>
@@ -47,7 +47,7 @@ const COMPONENTS = [CardTicketBuyComponent]
         </div>
       </div>
       <div
-        class="col-span-4 shadow-md shadow-gray-200 rounded-md p-4 sticky top-20  max-h-[500px] overflow-y-auto"
+        class="lg:col-span-4 col-span-full place-self-center lg:place-self-start w-full max-w-[600px] lg:max-w-full shadow-md shadow-gray-200 rounded-md p-4 sticky top-20 max-h-[500px] overflow-y-auto"
       >
         <h3 class="text-2xl font-medium">Ingressos</h3>
         <div class="mt-4 flex flex-col gap-4">

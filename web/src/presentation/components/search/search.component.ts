@@ -1,11 +1,14 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, inject, signal } from '@angular/core';
 
 @Component({
   selector: 'app-search',
   imports: [],
   template: `
     <div
+      #elementRef
       class="w-full xl:w-1/3 border p-2 flex items-center gap-2 rounded-md border-gray-200"
+      (click)="toggleSearch()"
+      [class.border-primary]="isActive()"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -28,4 +31,19 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styles: '',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchComponent {}
+export class SearchComponent {
+  public isActive = signal<boolean>(false);
+  private elementRef: ElementRef = inject(ElementRef);
+
+
+  toggleSearch() {
+    this.isActive.set(!this.isActive());
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: Event) {
+    if (!this.elementRef.nativeElement.contains(event.target)) {
+      this.isActive.set(false);
+    }
+  }
+}
