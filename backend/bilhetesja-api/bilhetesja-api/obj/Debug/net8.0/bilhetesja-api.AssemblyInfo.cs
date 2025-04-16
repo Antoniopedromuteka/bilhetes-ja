@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("096d5722-435b-42e4-bf95-4ac002cad199")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("bilhetesja-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ab186baa9d4b04666a90d889dc0b101d410d7df")]
 [assembly: System.Reflection.AssemblyProductAttribute("bilhetesja-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bilhetesja-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
