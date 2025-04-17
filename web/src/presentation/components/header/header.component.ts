@@ -36,11 +36,12 @@ const COMPONENTS = [SearchComponent];
             <path d="M13 17v2"></path>
             <path d="M13 11v2"></path>
           </svg>
-          <h2 class="text-2xl font-bold cursor-pointer" routerLink="/">BilhetesJá</h2>
+          <h2 class="text-2xl font-bold cursor-pointer" routerLink="/">BilheteJá</h2>
         </div>
         <div class="w-full flex justify-end items-center xl:gap-5 gap-3">
           <app-search class="hidden md:flex md:flex-1 justify-end" />
           <button
+            routerLink="/create-event"
             class="flex w-[11rem] cursor-pointer xl:max-w-[170px] xl:w-full items-csnter gap-2 border py-2 px-6 rounded-md bg-primary text-white"
           >
             <svg
