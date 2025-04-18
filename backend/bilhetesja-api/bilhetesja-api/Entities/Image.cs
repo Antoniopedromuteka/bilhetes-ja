@@ -17,7 +17,6 @@ namespace bilhetesja_api.Entities
 
         public DateTime DataUpload { get; set; }
 
-        // Referência reversa
         public ICollection<Event> Eventos { get; set; }
         public ICollection<User> Usuarios { get; set; }
     }

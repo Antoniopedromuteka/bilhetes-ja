@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\dtos\\upload\\imageuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\dtos\\upload\\imageuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\dtos\\upload\\imageuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\dtos\\upload\\imageuploaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -228,7 +228,7 @@
         },
         {
           "DockedWidth": 1071,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -257,19 +257,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "TicketRepository.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\TicketRepository.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\TicketRepository.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\TicketRepository.cs",
-              "RelativeToolTip": "bilhetesja-api\\Repository\\TicketRepository.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T21:45:30.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "TicketTypeRepository.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\TicketTypeRepository.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\TicketTypeRepository.cs",
@@ -282,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\UserRepository.cs",
@@ -295,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EventController.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\EventController.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Controllers\\EventController.cs",
@@ -308,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Program.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Program.cs",
@@ -327,35 +314,22 @@
               "RelativeDocumentMoniker": "bilhetesja-api\\Controllers\\ImageController.cs",
               "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\ImageController.cs",
               "RelativeToolTip": "bilhetesja-api\\Controllers\\ImageController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwBgAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T11:28:46.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EventService.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\EventService.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Services\\EventService.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\EventService.cs",
-              "RelativeToolTip": "bilhetesja-api\\Services\\EventService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBUAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ImageUploadDTO.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\Upload\\ImageUploadDTO.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\Upload\\ImageUploadDTO.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\Upload\\ImageUploadDTO.cs",
+              "RelativeToolTip": "bilhetesja-api\\DTOs\\Upload\\ImageUploadDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T13:55:30.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EventRepository.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\EventRepository.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\EventRepository.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\EventRepository.cs",
-              "RelativeToolTip": "bilhetesja-api\\Repository\\EventRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T11:38:21.147Z",
+              "WhenOpened": "2025-04-09T11:25:43.99Z",
               "EditorCaption": ""
             },
             {
@@ -369,14 +343,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ImageUploadDTO.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\Upload\\ImageUploadDTO.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\Upload\\ImageUploadDTO.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\Upload\\ImageUploadDTO.cs",
-              "RelativeToolTip": "bilhetesja-api\\DTOs\\Upload\\ImageUploadDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Title": "EventService.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\EventService.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Services\\EventService.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\EventService.cs",
+              "RelativeToolTip": "bilhetesja-api\\Services\\EventService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBUAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T11:25:43.99Z",
+              "WhenOpened": "2025-04-07T13:55:30.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TicketRepository.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\TicketRepository.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\TicketRepository.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\TicketRepository.cs",
+              "RelativeToolTip": "bilhetesja-api\\Repository\\TicketRepository.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T21:45:30.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EventRepository.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\EventRepository.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\EventRepository.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\EventRepository.cs",
+              "RelativeToolTip": "bilhetesja-api\\Repository\\EventRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T11:38:21.147Z",
               "EditorCaption": ""
             },
             {
@@ -406,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IEventRepository.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\Interfaces\\IEventRepository.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\Interfaces\\IEventRepository.cs",

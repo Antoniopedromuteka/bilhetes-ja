@@ -16,5 +16,5 @@ const COMPONENTS = [RouterOutlet, HeaderComponent, FooterComponent]
   styles: ''
 })
 export class AppComponent {
-  title = 'bilhetes-ja';
+  title = 'bilhete-ja';
 }
