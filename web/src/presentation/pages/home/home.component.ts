@@ -15,7 +15,7 @@ const COMPONENTS = [BannerComponent, CategorySectionComponent, EventSectionCompo
       <app-banner />
       <app-category-section/>
       <app-event-section />
-      <section class="max-w-[1280px] mx-auto mb-4">
+      <section class="xl:max-w-[1280px] w-full mx-auto mb-4 px-3 xl:px-0">
         <h3 class="font-semibold text-xl">Descubra Eventos na sua cidade</h3>
         <app-search-section />
       </section>

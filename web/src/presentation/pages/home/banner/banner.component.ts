@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
         <p class="text-xl text-white text-center">Compre seus ingressos de forma rápida, fácil e segura</p>
         <div class="flex items-center gap-3 justify-center">
           <button class="bg-white text-primary px-4 py-2 rounded-md cursor-pointer" routerLink="/events">Explorar Eventos</button>
-          <button class="bg-primary text-white px-4 py-2 rounded-md border-2 border-white cursor-pointer">Criar Evento</button>
+          <button routerLink="/create-event" class="bg-primary text-white px-4 py-2 rounded-md border-2 border-white cursor-pointer">Criar Evento</button>
         </div>
       </div>
     </main>

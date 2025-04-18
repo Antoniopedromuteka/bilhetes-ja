@@ -14,6 +14,14 @@ export const routes: Routes = [
     loadComponent: () => import('../presentation/pages/event/event.component').then((m) => m.EventComponent)
   },
   {
+    path: 'auth/sign-in',
+    loadComponent: () => import('../presentation/pages/auth/sign-in/sign-in.component').then((m) => m.SignInComponent)
+  },
+  {
+    path: 'auth/sign-up',
+    loadComponent: () => import('../presentation/pages/auth/sign-up/sign-up.component').then((m) => m.SignUpComponent)
+  },
+  {
     path: 'create-event',
     loadComponent: () => import('../presentation/pages/create-event/create-event.component').then((m) => m.CreateEventComponent)
   },
