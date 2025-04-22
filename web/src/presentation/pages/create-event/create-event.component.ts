@@ -128,7 +128,7 @@ const MODULES = [MatExpansionModule];
       <section class="w-full h-auto bg-gray-100">
         <div class="max-w-[1280px] mx-auto w-full h-auto">
           <h3 class="xl:text-4xl text-2xl font-bold text-primary text-center pt-10 xl:pt-40">
-            Como Vender Ingressos na Ticket.ao?
+            Como Vender Ingressos na BilheteJa?
           </h3>
           <section
             class="max-w-[1280px] mx-auto w-full h-auto py-10 grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1"

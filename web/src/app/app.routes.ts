@@ -18,6 +18,10 @@ export const routes: Routes = [
     loadComponent: () => import('../presentation/pages/auth/sign-in/sign-in.component').then((m) => m.SignInComponent)
   },
   {
+    path: 'auth/reset-password',
+    loadComponent: () => import('../presentation/pages/auth/reset-password/reset-password.component').then((m) => m.ResetPasswordComponent)
+  },
+  {
     path: 'auth/sign-up',
     loadComponent: () => import('../presentation/pages/auth/sign-up/sign-up.component').then((m) => m.SignUpComponent)
   },
