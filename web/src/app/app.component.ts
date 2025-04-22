@@ -9,9 +9,11 @@ const COMPONENTS = [RouterOutlet, HeaderComponent, FooterComponent]
   selector: 'app-root',
   imports: [...COMPONENTS],
   template: `
+    <main class="w-full mi-h-screen">
       <app-header></app-header>
         <router-outlet></router-outlet>
       <app-footer></app-footer>
+    </main>
     `,
   styles: ''
 })

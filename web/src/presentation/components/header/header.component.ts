@@ -9,7 +9,7 @@ const COMPONENTS = [SearchComponent];
   imports: [...COMPONENTS, RouterLink],
   template: `
     <header
-      class="px-2 w-full h-[64px] shadow-md shadow-black-200 fixed top-0 right-0 left-0 w-full bg-white z-50"
+      class="px-2 w-full h-[64px] shadow-md shadow-black-200 fixed top-0 right-0 left-0 bg-white z-50"
     >
       <section
         class="max-w-[1280px] w-full h-full flex items-center justify-between xl:mx-auto"

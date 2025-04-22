@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-footer',
   imports: [],
   template: `
-    <footer class="w-full h-auto xl:h-[25rem] bg-tertiary flex flex-col px-3 xl:px-0 py-10 justify-between">
+    <footer class="w-full h-full gap-4 bg-tertiary flex flex-col px-3 xl:px-0 py-10 justify-between">
       <div class="xl:max-w-[1280px] mx-auto grid xl:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-3">
         <div class="w-full flex flex-col flex-wrap">
           <h4 class="text-white text-xl font-bold">Bilhetes Já</h4>
@@ -108,7 +108,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </div>
       </div>
       <hr class="text-slate-600 mx-5 h-[1px]" />
-      <div class="w-full max-w-[1280px] mx-auto h-[3rem] flex items-center justify-center">
+      <div class="w-full xl:max-w-[1280px] mx-auto h-[3rem] flex items-center justify-center">
         <p class="text-slate-400 text-center">
           &copf; 2025 Bilhetes Já. Todos os direitos reservados
         </p>

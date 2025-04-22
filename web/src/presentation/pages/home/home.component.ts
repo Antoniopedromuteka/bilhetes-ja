@@ -11,11 +11,11 @@ const COMPONENTS = [BannerComponent, CategorySectionComponent, EventSectionCompo
   selector: 'app-home',
   imports: [...COMPONENTS],
   template: `
-    <main class="w-full h-[calc(100vh - 64px)] mt-[64px] h-auto min-h-screen">
+    <main class="w-full mt-[64px] h-auto">
       <app-banner />
       <app-category-section/>
       <app-event-section />
-      <section class="xl:max-w-[1280px] w-full mx-auto mb-4 px-3 xl:px-0">
+      <section class="xl:max-w-[1280px] w-full h-auto mx-auto mb-4 px-3 xl:px-0">
         <h3 class="font-semibold text-xl">Descubra Eventos na sua cidade</h3>
         <app-search-section />
       </section>

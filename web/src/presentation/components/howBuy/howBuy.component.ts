@@ -11,7 +11,7 @@ const MODULES = []
   imports: [RouterLink],
   template: `<main class="w-full h-auto">
     <section class="w-full bg-primary h-auto px-3 xl:px-0">
-      <div class="xl:max-w-[1280px] mx-auto w-full h-[15rem]">
+      <div class="xl:max-w-[1280px] mx-auto w-full xl:h-[15rem] h-auto">
         <div class="text-white text-2xl pt-[5rem] font-semibold">
           <h3>COMO COMPRAR O SEU INGRESSO</h3>
           <span>na plataforma bilheteJá?</span>
