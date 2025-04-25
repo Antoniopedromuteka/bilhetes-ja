@@ -32,47 +32,8 @@
         },
         {
           "DockedWidth": 1071,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WalletTransaction.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\WalletTransaction.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Entities\\WalletTransaction.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\WalletTransaction.cs",
-              "RelativeToolTip": "bilhetesja-api\\Entities\\WalletTransaction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T13:50:55.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Image.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Image.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Entities\\Image.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Image.cs",
-              "RelativeToolTip": "bilhetesja-api\\Entities\\Image.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T13:47:53.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrganizerRequestService.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\OrganizerRequestService.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Services\\OrganizerRequestService.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\OrganizerRequestService.cs",
-              "RelativeToolTip": "bilhetesja-api\\Services\\OrganizerRequestService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T16:33:51.161Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
@@ -96,6 +57,43 @@
             {
               "$type": "Bookmark",
               "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WalletTransaction.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\WalletTransaction.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Entities\\WalletTransaction.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\WalletTransaction.cs",
+              "RelativeToolTip": "bilhetesja-api\\Entities\\WalletTransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:50:55.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Image.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Image.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Entities\\Image.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Image.cs",
+              "RelativeToolTip": "bilhetesja-api\\Entities\\Image.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:47:53.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrganizerRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\OrganizerRequestService.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Services\\OrganizerRequestService.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\OrganizerRequestService.cs",
+              "RelativeToolTip": "bilhetesja-api\\Services\\OrganizerRequestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T16:33:51.161Z"
             }
           ]
         }
