@@ -4,6 +4,7 @@ using bilhetesja_api.Entities;
 using bilhetesja_api.Repository.Interfaces;
 using bilhetesja_api.Services.Interface;
 using FluentValidation;
+using System.Security.Claims;
 
 namespace bilhetesja_api.Services
 {
@@ -11,11 +12,13 @@ namespace bilhetesja_api.Services
     {
         private readonly IUserRepository _repository;
         private readonly IMapper _mapper;
+        private readonly IHttpContextAccessor _httpContext;
 
-        public UserService(IUserRepository repository, IMapper mapper)
+        public UserService(IUserRepository repository, IMapper mapper, IHttpContextAccessor httpContext)
         {
             _repository = repository;
             _mapper = mapper;
+            _httpContext = httpContext;
         }
 
         public async Task<IEnumerable<UserReadDto>> GetAllAsync()
@@ -56,6 +59,26 @@ namespace bilhetesja_api.Services
         {
             return await _repository.DeleteAsync(id);
         }
+
+        public async Task<UserMeDto?> GetMeAsync()
+        {
+            var userIdClaim = _httpContext.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userIdClaim == null) return null;
+
+            var user = await _repository.GetByIdAsync(int.Parse(userIdClaim));
+            if (user == null) return null;
+
+            return new UserMeDto
+            {
+                Id = user.Id,
+                Nome = user.Nome,
+                Email = user.Email,
+                Telefone = user.Telefone,
+                TipoUsuario = user.TipoUsuario.ToString(),
+                ImagemUrl = user.Imagem?.Url
+            };
+        }
+
     }
 
 }

@@ -1,5 +1,6 @@
 ﻿using bilhetesja_api.DTOs.Event;
 using bilhetesja_api.Services.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace bilhetesja_api.Controllers
@@ -26,6 +27,7 @@ namespace bilhetesja_api.Controllers
             return evento == null ? NotFound() : Ok(evento);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<EventReadDto>> Create(EventCreateDto dto)
         {
@@ -33,6 +35,7 @@ namespace bilhetesja_api.Controllers
             return CreatedAtAction(nameof(GetById), new { id = evento.Id }, evento);
         }
 
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, EventUpdateDto dto)
         {
@@ -40,6 +43,7 @@ namespace bilhetesja_api.Controllers
             return success ? NoContent() : NotFound();
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

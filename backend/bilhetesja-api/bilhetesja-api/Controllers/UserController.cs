@@ -1,5 +1,6 @@
 ﻿using bilhetesja_api.DTOs.User;
 using bilhetesja_api.Services.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace bilhetesja_api.Controllers
@@ -45,6 +46,16 @@ namespace bilhetesja_api.Controllers
         {
             var success = await _service.DeleteAsync(id);
             return success ? NoContent() : NotFound();
+        }
+
+        [Authorize]
+        [HttpGet("me")]
+        public async Task<ActionResult<UserMeDto>> GetMe()
+        {
+            var user = await _service.GetMeAsync();
+            if (user == null) return NotFound("Usuário não encontrado");
+
+            return Ok(user);
         }
     }
 

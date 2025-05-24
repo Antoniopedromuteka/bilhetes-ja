@@ -14,7 +14,8 @@ namespace bilhetesja_api.Data
         public DbSet<TicketType> TicketTypes { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Payment> Payments { get; set; }
-        public DbSet<OrganizerRequest> OrganizerRequests { get; set; }
+        public DbSet<OrganizerRequest> OrganizerRequests { get; set; } = null!;
+
         public DbSet<Wallet> Wallets { get; set; }
         public DbSet<WalletTransaction> WalletTransactions { get; set; }
         public DbSet<Image> Images { get; set; }
@@ -30,15 +31,21 @@ namespace bilhetesja_api.Data
                 .HasDefaultValue(StatusEvento.Pendente);
             });
 
-            modelBuilder.Entity<User>()
-                .HasOne(u => u.OrganizerRequest)
-                .WithOne(o => o.Usuario)
-                .HasForeignKey<OrganizerRequest>(o => o.UsuarioId);
+
+            //modelBuilder.Entity<User>()
+            //    .HasOne(u => u.OrganizerRequest)
+            //    .WithOne(o => o.Usuario)
+            //    .HasForeignKey<OrganizerRequest>(o => o.UsuarioId);
 
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Carteira)
                 .WithOne(w => w.Usuario)
                 .HasForeignKey<Wallet>(w => w.UsuarioId);
+
+            modelBuilder.Entity<Wallet>()
+              .HasMany(w => w.Transacoes)
+              .WithOne(t => t.Wallet)
+              .HasForeignKey(t => t.WalletId);
 
             modelBuilder.Entity<User>()
            .HasOne(u => u.Imagem)

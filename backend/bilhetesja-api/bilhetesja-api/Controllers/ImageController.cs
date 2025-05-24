@@ -3,11 +3,13 @@
     using global::bilhetesja_api.Data;
     using global::bilhetesja_api.DTOs.Upload;
     using global::bilhetesja_api.Entities;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using System;
 
     namespace bilhetesja_api.Controllers
     {
+        [Authorize]
         [ApiController]
         [Route("[controller]")]
         public class ImageController : ControllerBase

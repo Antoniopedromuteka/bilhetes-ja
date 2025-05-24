@@ -7,21 +7,21 @@ namespace bilhetesja_api.DTOs.OrganizerRequest
     }
     public class OrganizerRequestCreateDto
     {
-        public int UsuarioId { get; set; }
+        public int UsuarioId { get; set; } = 0;
     }
 
     public class OrganizerRequestReadDto
     {
-        public int Id { get; set; }
-        public string Status { get; set; }
-        public DateTime DataSolicitacao { get; set; }
-        public int UsuarioId { get; set; }
-        public string NomeUsuario { get; set; }
+        public int Id { get; set; } = 0;
+        public string Status { get; set; } = string.Empty;
+        public DateTime DataSolicitacao { get; set; } = DateTime.Now;
+        public int UsuarioId { get; set; } = 0;
+        public string NomeUsuario { get; set; } = string.Empty;
     }
 
     public class OrganizerRequestUpdateStatusDto
     {
-        public StatusSolicitacao Status { get; set; }
+        public StatusSolicitacao Status { get; set; } = StatusSolicitacao.Pendente;
     }
 
 }

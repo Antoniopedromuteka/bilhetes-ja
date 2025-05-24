@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-reset-password',
-  imports: [],
+  imports: [RouterLink],
   template: ` <main
   class="w-full max-h-screen h-full py-10 xl:py-20 mt-[64px] bg-gray-100 px-3 xl:px-0"
 >

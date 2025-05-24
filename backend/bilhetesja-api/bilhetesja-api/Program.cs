@@ -7,6 +7,12 @@ using Microsoft.EntityFrameworkCore;
 using bilhetesja_api.Repository.Interfaces;
 using bilhetesja_api.Repository;
 using Microsoft.Extensions.FileProviders;
+using bilhetesja_api.Helpers;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using bilhetesja_api.Middlewares;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,7 +29,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddScoped<IEventRepository, EventRepository>();
-builder.Services.AddScoped<IEventService, EventService>();
+builder.Services.AddScoped<IEventService, bilhetesja_api.Services.EventService>();
 builder.Services.AddValidatorsFromAssemblyContaining<EventCreateDtoValidator>();
 
 builder.Services.AddScoped<IOrganizerRequestRepository, OrganizerRequestRepository>();
@@ -38,6 +44,36 @@ builder.Services.AddScoped<ITicketRepository, TicketRepository>();
 builder.Services.AddScoped<ITicketService, TicketService>();
 builder.Services.AddValidatorsFromAssemblyContaining<TicketCreateDtoValidator>();
 
+builder.Services.AddScoped<IWalletRepository, WalletRepository>();
+builder.Services.AddScoped<IWalletTransactionRepository, WalletTransactionRepository>();
+builder.Services.AddScoped<ITicketRepository, TicketRepository>();
+builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+builder.Services.AddScoped<IStripeService, StripeService>();
+
+builder.Services.AddScoped<IEmailService, EmailService>();
+
+
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddSingleton<JwtTokenGenerator>();
+
+object value = builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
+
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddDirectoryBrowser(); 
 builder.Services.AddCors(); 
 
@@ -70,8 +106,10 @@ if (app.Environment.IsDevelopment())
 
 
 app.UseHttpsRedirection();
-
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseAuthorization();
+app.UseAuthorization();
+
 
 app.MapControllers();
 

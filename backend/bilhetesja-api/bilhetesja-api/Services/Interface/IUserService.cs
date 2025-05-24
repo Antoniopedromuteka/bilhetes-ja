@@ -9,5 +9,6 @@ namespace bilhetesja_api.Services.Interface
         Task<UserReadDto> CreateAsync(UserCreateDto dto);
         Task<bool> UpdateAsync(int id, UserUpdateDto dto);
         Task<bool> DeleteAsync(int id);
+        Task<UserMeDto?> GetMeAsync();
     }
 }

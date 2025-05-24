@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace bilhetesja_api.Migrations
 {
     /// <inheritdoc />
-    public partial class Createtables : Migration
+    public partial class createtables : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -64,7 +64,7 @@ namespace bilhetesja_api.Migrations
                     Local = table.Column<string>(type: "TEXT", maxLength: 255, nullable: false),
                     DataEvento = table.Column<DateTime>(type: "TEXT", nullable: false),
                     LotacaoTotal = table.Column<int>(type: "INTEGER", nullable: false),
-                    Status = table.Column<int>(type: "INTEGER", nullable: false),
+                    Status = table.Column<int>(type: "INTEGER", nullable: false, defaultValue: 0),
                     OrganizadorId = table.Column<int>(type: "INTEGER", nullable: false),
                     ImagemId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
@@ -250,8 +250,7 @@ namespace bilhetesja_api.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_OrganizerRequests_UsuarioId",
                 table: "OrganizerRequests",
-                column: "UsuarioId",
-                unique: true);
+                column: "UsuarioId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Payments_TicketId",

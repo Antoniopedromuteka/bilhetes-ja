@@ -55,7 +55,9 @@ namespace bilhetesja_api.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Status")
-                        .HasColumnType("INTEGER");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(0);
 
                     b.HasKey("Id");
 
@@ -110,8 +112,7 @@ namespace bilhetesja_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UsuarioId")
-                        .IsUnique();
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("OrganizerRequests");
                 });
@@ -335,8 +336,8 @@ namespace bilhetesja_api.Migrations
             modelBuilder.Entity("bilhetesja_api.Entities.OrganizerRequest", b =>
                 {
                     b.HasOne("bilhetesja_api.Entities.User", "Usuario")
-                        .WithOne("OrganizerRequest")
-                        .HasForeignKey("bilhetesja_api.Entities.OrganizerRequest", "UsuarioId")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -452,12 +453,9 @@ namespace bilhetesja_api.Migrations
 
             modelBuilder.Entity("bilhetesja_api.Entities.User", b =>
                 {
-                    b.Navigation("Carteira")
-                        .IsRequired();
+                    b.Navigation("Carteira");
 
                     b.Navigation("EventosOrganizados");
-
-                    b.Navigation("OrganizerRequest");
 
                     b.Navigation("TicketsComprados");
                 });

@@ -10,6 +10,7 @@
         void Delete(Ticket ticket);
         Task<bool> SaveChangesAsync();
         Task<IEnumerable<Ticket>> GetAllAsync(StatusBilhete? status);
+        Task UpdateAsync(Ticket ticket);
 
     }
 

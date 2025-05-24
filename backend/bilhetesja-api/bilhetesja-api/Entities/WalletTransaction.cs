@@ -6,12 +6,12 @@
 
         public decimal Valor { get; set; }
 
-        public string Descricao { get; set; }
+        public string Descricao { get; set; } = string.Empty;
 
         public DateTime Data { get; set; }
 
-        public int WalletId { get; set; }
-        public Wallet Wallet { get; set; }
+        public required int WalletId { get; set; }
+        public Wallet? Wallet { get; set; }
 
         public int? EventoId { get; set; }
         public Event? Evento { get; set; }

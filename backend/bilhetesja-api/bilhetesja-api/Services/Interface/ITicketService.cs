@@ -11,6 +11,8 @@
         Task<bool> UpdateAsync(int id, TicketUpdateDto dto);
         Task<bool> DeleteAsync(int id);
         Task<IEnumerable<TicketReadDto>> GetAllAsync(StatusBilhete? status);
+        Task<bool> UpdateStatusAsync(int ticketId, StatusBilhete novoStatus);
+     
 
     }
 

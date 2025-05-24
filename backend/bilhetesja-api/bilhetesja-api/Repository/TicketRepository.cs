@@ -51,6 +51,11 @@
             return await query.ToListAsync();
         }
 
+        public async Task UpdateAsync(Ticket ticket)
+        {
+            _context.Tickets.Update(ticket);
+            await _context.SaveChangesAsync();
+        }
     }
 
 }

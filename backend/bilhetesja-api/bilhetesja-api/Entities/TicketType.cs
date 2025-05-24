@@ -7,16 +7,16 @@ namespace bilhetesja_api.Entities
         public int Id { get; set; }
 
         [Required, MaxLength(100)]
-        public string Nome { get; set; }
+        public string Nome { get; set; } = string.Empty;
 
         public decimal Preco { get; set; }
 
         public int Quantidade { get; set; }
 
         public int EventoId { get; set; }
-        public Event Evento { get; set; }
+        public Event? Evento { get; set; }
 
-        public ICollection<Ticket> Bilhetes { get; set; }
+        public ICollection<Ticket> Bilhetes { get; set; } = new List<Ticket>();
     }
 
 }

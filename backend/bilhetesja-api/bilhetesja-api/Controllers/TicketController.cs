@@ -1,10 +1,12 @@
 ﻿using bilhetesja_api.DTOs.Ticket;
 using bilhetesja_api.Entities;
 using bilhetesja_api.Services.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace bilhetesja_api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class TicketController : ControllerBase
@@ -50,6 +52,30 @@ namespace bilhetesja_api.Controllers
         {
             var deleted = await _service.DeleteAsync(id);
             return deleted ? NoContent() : NotFound();
+        }
+
+        [Authorize(Roles = "Administrador")]
+        [HttpPatch("{id}/cancel")]
+        public async Task<IActionResult> Cancel(int id)
+        {
+            await _service.UpdateStatusAsync(id, StatusBilhete.Cancelado);
+            return NoContent();
+        }
+
+        [Authorize(Roles = "Administrador")]
+        [HttpPatch("{id}/approve")]
+        public async Task<IActionResult> Approve(int id)
+        {
+            await _service.UpdateStatusAsync(id, StatusBilhete.Ativo);
+            return NoContent();
+        }
+
+        [Authorize(Roles = "Administrador")]
+        [HttpPatch("{id}/status")]
+        public async Task<IActionResult> UpdateStatus(int id, [FromBody] TicketStatusUpdateDto dto)
+        {
+            await _service.UpdateStatusAsync(id, dto.Status);
+            return NoContent();
         }
     }
 }

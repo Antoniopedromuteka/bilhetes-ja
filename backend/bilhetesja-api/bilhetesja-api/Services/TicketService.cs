@@ -3,6 +3,7 @@
     using AutoMapper;
     using bilhetesja_api.DTOs.Ticket;
     using bilhetesja_api.Entities;
+    using bilhetesja_api.Exceptions;
     using bilhetesja_api.Repository.Interfaces;
     using bilhetesja_api.Services.Interface;
 
@@ -70,6 +71,16 @@
             return _mapper.Map<IEnumerable<TicketReadDto>>(tickets);
         }
 
+        public async Task<bool> UpdateStatusAsync(int ticketId, StatusBilhete novoStatus)
+        {
+            var ticket = await _repository.GetByIdAsync(ticketId);
+            if (ticket == null)
+                throw new HttpException(404, "Bilhete não encontrado");
+
+            ticket.Status = novoStatus;
+            await _repository.UpdateAsync(ticket);
+            return true;
+        }
     }
 
 }

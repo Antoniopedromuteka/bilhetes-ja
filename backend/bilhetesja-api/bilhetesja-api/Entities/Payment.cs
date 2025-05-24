@@ -19,16 +19,16 @@ namespace bilhetesja_api.Entities
         public decimal ValorLiquido { get; set; }
 
         [MaxLength(50)]
-        public string Metodo { get; set; }
+        public string Metodo { get; set; } = string.Empty;
 
         public StatusPagamento Status { get; set; }
 
-        public string StripeId { get; set; }
+        public string StripeId { get; set; } = string.Empty;
 
         public DateTime DataPagamento { get; set; }
 
         public int TicketId { get; set; }
-        public Ticket Ticket { get; set; }
+        public Ticket Ticket { get; set; } = new Ticket();
     }
 
 }

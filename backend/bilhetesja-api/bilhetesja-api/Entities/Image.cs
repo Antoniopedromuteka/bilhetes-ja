@@ -8,17 +8,17 @@ namespace bilhetesja_api.Entities
 
         [Required]
         [MaxLength(255)]
-        public string Url { get; set; }
+        public required string Url { get; set; }
 
         [MaxLength(255)]
-        public string NomeArquivo { get; set; }
+        public required string NomeArquivo { get; set; }
 
         public long Tamanho { get; set; }
 
         public DateTime DataUpload { get; set; }
 
-        public ICollection<Event> Eventos { get; set; }
-        public ICollection<User> Usuarios { get; set; }
+        public ICollection<Event>? Eventos { get; set; }
+        public ICollection<User>? Usuarios { get; set; }
     }
 
 }

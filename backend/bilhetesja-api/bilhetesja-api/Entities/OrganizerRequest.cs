@@ -16,7 +16,7 @@
         public DateTime DataSolicitacao { get; set; }
 
         public int UsuarioId { get; set; }
-        public User Usuario { get; set; }
+        public User Usuario { get; set; } = new User();
     }
 
 }

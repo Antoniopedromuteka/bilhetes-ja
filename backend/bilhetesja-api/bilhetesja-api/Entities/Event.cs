@@ -14,29 +14,29 @@ namespace bilhetesja_api.Entities
         public int Id { get; set; }
 
         [Required, MaxLength(255)]
-        public string Nome { get; set; }
+        public required string Nome { get; set; }
 
-        public string Descricao { get; set; }
+        public string Descricao { get; set; } = string.Empty;
 
         [MaxLength(100)]
-        public string Categoria { get; set; }
+        public string Categoria { get; set; } = string.Empty;
 
         [MaxLength(255)]
-        public string Local { get; set; }
+        public string Local { get; set; } = string.Empty;
 
         public DateTime DataEvento { get; set; }
 
-        public int LotacaoTotal { get; set; }
+        public int LotacaoTotal { get; set; } = 0;
 
-        public StatusEvento Status { get; set; }
+        public StatusEvento Status { get; set; } = StatusEvento.Pendente;
 
         public int OrganizadorId { get; set; }
-        public User Organizador { get; set; }
+        public User? Organizador { get; set; }
 
         public int? ImagemId { get; set; }
         public Image? Imagem { get; set; }
 
-        public ICollection<TicketType> TiposBilhetes { get; set; }
+        public ICollection<TicketType> TiposBilhetes { get; set; } = new List<TicketType>();
     }
 
 }
