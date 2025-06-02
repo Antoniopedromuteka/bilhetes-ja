@@ -5,15 +5,10 @@ export const DASHBOARD_ROUTES: Routes = [
     path: '',
     loadComponent: () =>
       import('../presentation/components/dashboardLayout/dashboardLayout.component').then(m => m.DashboardLayoutComponent),
-    children: [
+      children: [
       {
         path: 'home',
-        loadComponent: () => import('../presentation/pages/dashboard/dashHome/dashHome.component').then((m) => m.DashHomeComponent)
-      },
-      {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: 'dashboard',
+        loadComponent: () => import('../presentation/pages/dashboard/dashHome/dashHome.component').then((m) => m.DashHomeComponent),
       },
       {
         path: 'wallet',
@@ -30,7 +25,12 @@ export const DASHBOARD_ROUTES: Routes = [
       {
         path: 'settings',
         loadComponent: () => import('../presentation/pages/dashboard/settings/settings.component').then((m) => m.SettingsComponent)
-      }
+      },
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home',
+      },
     ]
   },
 ];

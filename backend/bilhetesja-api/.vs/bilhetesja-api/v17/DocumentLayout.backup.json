@@ -3,6 +3,58 @@
   "WorkspaceRootPath": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Migrations\\20250602143748_AddCategoryMaxlenght.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bilhetesja-api\\Migrations\\20250602143748_AddCategoryMaxlenght.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Migrations\\20250602142701_AddCategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bilhetesja-api\\Migrations\\20250602142701_AddCategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\repository\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\repository\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\data\\bilhetejadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\data\\bilhetejadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\repository\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\repository\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\controllers\\testaremailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\controllers\\testaremailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,16 +63,8 @@
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,18 +115,6 @@
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\dtos\\payment\\paymentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\entities\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\entities\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\entities\\tickettype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\entities\\tickettype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -123,10 +155,6 @@
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\repository\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\repository\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\services\\interface\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\services\\interface\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -137,10 +165,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\entities\\organizerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\entities\\organizerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\exceptions\\httpexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -155,20 +179,12 @@
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\dtos\\auth\\errorresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Migrations\\20250429094316_create-tables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bilhetesja-api\\Migrations\\20250429094316_create-tables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\entities\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\entities\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\data\\bilhetejadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|solutionrelative:bilhetesja-api\\data\\bilhetejadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91794655-99F4-4EDD-8771-AFEECC42B080}|bilhetesja-api\\bilhetesja-api.csproj|c:\\users\\anton\\onedrive\\documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\profiles\\tickettypeprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -240,7 +256,7 @@
         },
         {
           "DockedWidth": 1071,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -267,8 +283,69 @@
               "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250602143748_AddCategoryMaxlenght.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Migrations\\20250602143748_AddCategoryMaxlenght.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Migrations\\20250602143748_AddCategoryMaxlenght.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Migrations\\20250602143748_AddCategoryMaxlenght.cs",
+              "RelativeToolTip": "bilhetesja-api\\Migrations\\20250602143748_AddCategoryMaxlenght.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T14:37:48.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20250602142701_AddCategory.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Migrations\\20250602142701_AddCategory.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Migrations\\20250602142701_AddCategory.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Migrations\\20250602142701_AddCategory.cs",
+              "RelativeToolTip": "bilhetesja-api\\Migrations\\20250602142701_AddCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T14:27:02.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Program.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Program.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Program.cs",
+              "RelativeToolTip": "bilhetesja-api\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T16:42:30.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Event.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Entities\\Event.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Event.cs",
+              "RelativeToolTip": "bilhetesja-api\\Entities\\Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T09:14:00.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Entities\\Category.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Category.cs",
+              "RelativeToolTip": "bilhetesja-api\\Entities\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T13:24:26.275Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -276,7 +353,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "bilhetesja-api\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T14:15:55.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "EventService.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\EventService.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Services\\EventService.cs",
@@ -289,33 +387,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TestarEmailController.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\TestarEmailController.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Controllers\\TestarEmailController.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\TestarEmailController.cs",
-              "RelativeToolTip": "bilhetesja-api\\Controllers\\TestarEmailController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\CategoryRepository.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\CategoryRepository.cs",
+              "RelativeToolTip": "bilhetesja-api\\Repository\\CategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T23:57:46.935Z",
+              "WhenOpened": "2025-06-02T13:43:38.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\EmailService.cs",
-              "RelativeToolTip": "bilhetesja-api\\Services\\EmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAASAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Services\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\CategoryService.cs",
+              "RelativeToolTip": "bilhetesja-api\\Services\\CategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:12:52.061Z",
+              "WhenOpened": "2025-06-02T13:36:21.485Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "BilheteJaDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Data\\BilheteJaDbContext.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Data\\BilheteJaDbContext.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Data\\BilheteJaDbContext.cs",
+              "RelativeToolTip": "bilhetesja-api\\Data\\BilheteJaDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T08:58:05.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TicketRepository.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\TicketRepository.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\TicketRepository.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\TicketRepository.cs",
+              "RelativeToolTip": "bilhetesja-api\\Repository\\TicketRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T17:15:13.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "bilhetesja-api\\Repository\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T09:51:33.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\Interface\\IEmailService.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Services\\Interface\\IEmailService.cs",
@@ -323,25 +460,11 @@
               "RelativeToolTip": "bilhetesja-api\\Services\\Interface\\IEmailService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:12:13.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T17:12:13.608Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Program.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Program.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Program.cs",
-              "RelativeToolTip": "bilhetesja-api\\Program.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADgAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T16:42:30.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\appsettings.json",
               "RelativeDocumentMoniker": "bilhetesja-api\\appsettings.json",
@@ -349,12 +472,11 @@
               "RelativeToolTip": "bilhetesja-api\\appsettings.json",
               "ViewState": "AgIAAAIAAAAAAAAAAAAiwBsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-28T10:23:52.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T10:23:52.005Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "PaymentService.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\PaymentService.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Services\\PaymentService.cs",
@@ -362,12 +484,48 @@
               "RelativeToolTip": "bilhetesja-api\\Services\\PaymentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T17:22:00.236Z",
+              "WhenOpened": "2025-05-13T17:22:00.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Middleware\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "bilhetesja-api\\Middleware\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T09:58:55.133Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\EmailService.cs",
+              "RelativeToolTip": "bilhetesja-api\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:12:52.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TestarEmailController.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\TestarEmailController.cs",
+              "RelativeDocumentMoniker": "bilhetesja-api\\Controllers\\TestarEmailController.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\TestarEmailController.cs",
+              "RelativeToolTip": "bilhetesja-api\\Controllers\\TestarEmailController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T23:57:46.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "PaymentsController.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\PaymentsController.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Controllers\\PaymentsController.cs",
@@ -375,12 +533,11 @@
               "RelativeToolTip": "bilhetesja-api\\Controllers\\PaymentsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T17:18:57.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T17:18:57.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 16,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Controllers\\AuthController.cs",
@@ -388,12 +545,11 @@
               "RelativeToolTip": "bilhetesja-api\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T10:04:16.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T10:04:16.647Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 21,
               "Title": "PaymentRepository.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\PaymentRepository.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\PaymentRepository.cs",
@@ -401,12 +557,11 @@
               "RelativeToolTip": "bilhetesja-api\\Repository\\PaymentRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:10:24.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T17:10:24.388Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 17,
               "Title": "StripeService.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\StripeService.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Services\\StripeService.cs",
@@ -414,12 +569,11 @@
               "RelativeToolTip": "bilhetesja-api\\Services\\StripeService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T16:42:35.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T16:42:35.839Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 22,
               "Title": "WalletTransactionRepository.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\WalletTransactionRepository.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\WalletTransactionRepository.cs",
@@ -427,12 +581,11 @@
               "RelativeToolTip": "bilhetesja-api\\Repository\\WalletTransactionRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:09:35.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T17:09:35.752Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 23,
               "Title": "WalletRepository.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\WalletRepository.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\WalletRepository.cs",
@@ -440,12 +593,11 @@
               "RelativeToolTip": "bilhetesja-api\\Repository\\WalletRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:08:05.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T17:08:05.46Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 24,
               "Title": "IWalletTransactionRepository.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\Interfaces\\IWalletTransactionRepository.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\Interfaces\\IWalletTransactionRepository.cs",
@@ -453,12 +605,11 @@
               "RelativeToolTip": "bilhetesja-api\\Repository\\Interfaces\\IWalletTransactionRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:06:36.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T17:06:36.153Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 25,
               "Title": "IWalletRepository.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\Interfaces\\IWalletRepository.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\Interfaces\\IWalletRepository.cs",
@@ -466,12 +617,11 @@
               "RelativeToolTip": "bilhetesja-api\\Repository\\Interfaces\\IWalletRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:05:53.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T17:05:53.592Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 26,
               "Title": "TicketService.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\TicketService.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Services\\TicketService.cs",
@@ -479,12 +629,11 @@
               "RelativeToolTip": "bilhetesja-api\\Services\\TicketService.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAswEsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T17:12:33.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T17:12:33.636Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 27,
               "Title": "PaymentResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\Payment\\PaymentResponseDto.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\Payment\\PaymentResponseDto.cs",
@@ -492,12 +641,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\Payment\\PaymentResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T16:37:42.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T16:37:42.756Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 30,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Services\\UserService.cs",
@@ -505,12 +653,11 @@
               "RelativeToolTip": "bilhetesja-api\\Services\\UserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T16:38:51.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T16:38:51.462Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Controllers\\UserController.cs",
@@ -518,12 +665,11 @@
               "RelativeToolTip": "bilhetesja-api\\Controllers\\UserController.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAkwDIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T16:41:12.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T16:41:12.09Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "TicketType.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\TicketType.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Entities\\TicketType.cs",
@@ -531,51 +677,11 @@
               "RelativeToolTip": "bilhetesja-api\\Entities\\TicketType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:16:35.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:16:35.232Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Event.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Event.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Entities\\Event.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Event.cs",
-              "RelativeToolTip": "bilhetesja-api\\Entities\\Event.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:14:00.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Wallet.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Wallet.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Entities\\Wallet.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Wallet.cs",
-              "RelativeToolTip": "bilhetesja-api\\Entities\\Wallet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T08:54:55.88Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Payment.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Entities\\Payment.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Payment.cs",
-              "RelativeToolTip": "bilhetesja-api\\Entities\\Payment.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:15:42.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 34,
               "Title": "ImageController.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\ImageController.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Controllers\\ImageController.cs",
@@ -583,12 +689,11 @@
               "RelativeToolTip": "bilhetesja-api\\Controllers\\ImageController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAIBJwAsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T18:19:20.842Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T18:19:20.842Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 33,
               "Title": "UserMeDto.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\User\\UserMeDto.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\User\\UserMeDto.cs",
@@ -596,12 +701,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\User\\UserMeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T16:38:12.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T16:38:12.92Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 32,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\Interface\\IUserService.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Services\\Interface\\IUserService.cs",
@@ -609,12 +713,11 @@
               "RelativeToolTip": "bilhetesja-api\\Services\\Interface\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T16:42:01.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T16:42:01.326Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 31,
               "Title": "TicketController.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\TicketController.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Controllers\\TicketController.cs",
@@ -622,12 +725,11 @@
               "RelativeToolTip": "bilhetesja-api\\Controllers\\TicketController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T17:23:06.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T17:23:06.386Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 35,
               "Title": "EventController.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Controllers\\EventController.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Controllers\\EventController.cs",
@@ -635,25 +737,11 @@
               "RelativeToolTip": "bilhetesja-api\\Controllers\\EventController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T18:18:51.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T18:18:51.083Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "TicketRepository.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\TicketRepository.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\TicketRepository.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\TicketRepository.cs",
-              "RelativeToolTip": "bilhetesja-api\\Repository\\TicketRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T17:15:13.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 37,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Services\\AuthService.cs",
@@ -661,12 +749,11 @@
               "RelativeToolTip": "bilhetesja-api\\Services\\AuthService.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwCoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T09:54:38.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T09:54:38.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 36,
               "Title": "JwtTokenGenerator.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Helpers\\JwtTokenGenerator.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Helpers\\JwtTokenGenerator.cs",
@@ -674,12 +761,11 @@
               "RelativeToolTip": "bilhetesja-api\\Helpers\\JwtTokenGenerator.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAIBJwBoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T09:50:09.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T09:50:09.86Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "ITicketService.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\Interface\\ITicketService.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Services\\Interface\\ITicketService.cs",
@@ -687,12 +773,11 @@
               "RelativeToolTip": "bilhetesja-api\\Services\\Interface\\ITicketService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAswA0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T17:11:24.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T17:11:24.236Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "TicketStatusUpdateDto.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\Ticket\\TicketStatusUpdateDto.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\Ticket\\TicketStatusUpdateDto.cs",
@@ -700,25 +785,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\Ticket\\TicketStatusUpdateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T17:10:02.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T17:10:02.918Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ExceptionMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Middleware\\ExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Middleware\\ExceptionMiddleware.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Middleware\\ExceptionMiddleware.cs",
-              "RelativeToolTip": "bilhetesja-api\\Middleware\\ExceptionMiddleware.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwBUAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:58:55.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 43,
               "Title": "ErrorResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\Auth\\ErrorResponseDto.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\Auth\\ErrorResponseDto.cs",
@@ -726,25 +797,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\Auth\\ErrorResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:57:23.603Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:57:23.603Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Repository\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "bilhetesja-api\\Repository\\UserRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwDMAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:51:33.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 40,
               "Title": "OrganizerRequest.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\OrganizerRequest.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Entities\\OrganizerRequest.cs",
@@ -752,12 +809,11 @@
               "RelativeToolTip": "bilhetesja-api\\Entities\\OrganizerRequest.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAswBIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:15:33.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:15:33.928Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 41,
               "Title": "HttpException.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Exceptions\\HttpException.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Exceptions\\HttpException.cs",
@@ -765,12 +821,11 @@
               "RelativeToolTip": "bilhetesja-api\\Exceptions\\HttpException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T10:08:04.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T10:08:04.257Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 42,
               "Title": "bilhetesja-api.csproj",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\bilhetesja-api.csproj",
               "RelativeDocumentMoniker": "bilhetesja-api\\bilhetesja-api.csproj",
@@ -778,25 +833,11 @@
               "RelativeToolTip": "bilhetesja-api\\bilhetesja-api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-28T09:51:17.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T09:51:17.76Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "BilheteJaDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Data\\BilheteJaDbContext.cs",
-              "RelativeDocumentMoniker": "bilhetesja-api\\Data\\BilheteJaDbContext.cs",
-              "ToolTip": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Data\\BilheteJaDbContext.cs",
-              "RelativeToolTip": "bilhetesja-api\\Data\\BilheteJaDbContext.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAcwDcAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T08:58:05.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 45,
               "Title": "Image.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Entities\\Image.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Entities\\Image.cs",
@@ -804,12 +845,11 @@
               "RelativeToolTip": "bilhetesja-api\\Entities\\Image.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwBQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:37:41.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:37:41.902Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 44,
               "Title": "20250429094316_create-tables.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Migrations\\20250429094316_create-tables.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Migrations\\20250429094316_create-tables.cs",
@@ -820,7 +860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "TicketTypeProfile.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Profiles\\TicketTypeProfile.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Profiles\\TicketTypeProfile.cs",
@@ -828,12 +868,11 @@
               "RelativeToolTip": "bilhetesja-api\\Profiles\\TicketTypeProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:29:16.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:29:16.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "EventDTO.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\Event\\EventDTO.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\Event\\EventDTO.cs",
@@ -841,12 +880,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\Event\\EventDTO.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAIwCAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:10:45.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:10:45.011Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 48,
               "Title": "OrganizerRequestDTO.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\OrganizerRequest\\OrganizerRequestDTO.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\OrganizerRequest\\OrganizerRequestDTO.cs",
@@ -854,12 +892,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\OrganizerRequest\\OrganizerRequestDTO.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAA5wBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:10:12.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:10:12.996Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 49,
               "Title": "TicketCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\Ticket\\TicketCreateDto.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\Ticket\\TicketCreateDto.cs",
@@ -867,12 +904,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\Ticket\\TicketCreateDto.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAA7wBcAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:09:05.586Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:09:05.586Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "TicketTypeUpdateDto.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\TicketType\\TicketTypeUpdateDto.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\TicketType\\TicketTypeUpdateDto.cs",
@@ -880,12 +916,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\TicketType\\TicketTypeUpdateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:08:43.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:08:43.606Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 51,
               "Title": "TicketTypeReadDto.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\TicketType\\TicketTypeReadDto.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\TicketType\\TicketTypeReadDto.cs",
@@ -893,12 +928,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\TicketType\\TicketTypeReadDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:08:32.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:08:32.826Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 52,
               "Title": "ImageUploadDTO.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\Upload\\ImageUploadDTO.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\Upload\\ImageUploadDTO.cs",
@@ -906,12 +940,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\Upload\\ImageUploadDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:08:22.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:08:22.048Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 56,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\User\\UserDTO.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\User\\UserDTO.cs",
@@ -919,12 +952,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\User\\UserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:05:11.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:05:11.062Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 53,
               "Title": "RegisterUserDto.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\User\\RegisterUserDto.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\User\\RegisterUserDto.cs",
@@ -932,12 +964,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\User\\RegisterUserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T09:03:01.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T09:03:01.176Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 55,
               "Title": "AuthRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\Auth\\AuthRequestDto.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\Auth\\AuthRequestDto.cs",
@@ -945,12 +976,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\Auth\\AuthRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T09:46:02.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T09:46:02.635Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 54,
               "Title": "AuthResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\DTOs\\Auth\\AuthResponseDto.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\DTOs\\Auth\\AuthResponseDto.cs",
@@ -958,12 +988,11 @@
               "RelativeToolTip": "bilhetesja-api\\DTOs\\Auth\\AuthResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T09:46:40.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T09:46:40.197Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 57,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Services\\Interface\\IAuthService.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Services\\Interface\\IAuthService.cs",
@@ -971,12 +1000,11 @@
               "RelativeToolTip": "bilhetesja-api\\Services\\Interface\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T09:53:50.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T09:53:50.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 58,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Documentos\\work\\bilhetes-ja\\backend\\bilhetesja-api\\bilhetesja-api\\Helpers\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "bilhetesja-api\\Helpers\\PasswordHasher.cs",
@@ -984,8 +1012,7 @@
               "RelativeToolTip": "bilhetesja-api\\Helpers\\PasswordHasher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T09:48:39.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T09:48:39.93Z"
             }
           ]
         }

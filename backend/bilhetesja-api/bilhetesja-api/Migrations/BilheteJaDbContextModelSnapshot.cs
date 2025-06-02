@@ -17,16 +17,33 @@ namespace bilhetesja_api.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.3");
 
+            modelBuilder.Entity("bilhetesja_api.Entities.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("IconUrl")
+                        .HasMaxLength(500)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("bilhetesja_api.Entities.Event", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Categoria")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("TEXT");
+                    b.Property<int>("CategoriaId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("DataEvento")
                         .HasColumnType("TEXT");
@@ -60,6 +77,8 @@ namespace bilhetesja_api.Migrations
                         .HasDefaultValue(0);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoriaId");
 
                     b.HasIndex("ImagemId");
 
@@ -317,6 +336,12 @@ namespace bilhetesja_api.Migrations
 
             modelBuilder.Entity("bilhetesja_api.Entities.Event", b =>
                 {
+                    b.HasOne("bilhetesja_api.Entities.Category", "Categoria")
+                        .WithMany("Eventos")
+                        .HasForeignKey("CategoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("bilhetesja_api.Entities.Image", "Imagem")
                         .WithMany("Eventos")
                         .HasForeignKey("ImagemId")
@@ -327,6 +352,8 @@ namespace bilhetesja_api.Migrations
                         .HasForeignKey("OrganizadorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Categoria");
 
                     b.Navigation("Imagem");
 
@@ -427,6 +454,11 @@ namespace bilhetesja_api.Migrations
                     b.Navigation("Ticket");
 
                     b.Navigation("Wallet");
+                });
+
+            modelBuilder.Entity("bilhetesja_api.Entities.Category", b =>
+                {
+                    b.Navigation("Eventos");
                 });
 
             modelBuilder.Entity("bilhetesja_api.Entities.Event", b =>

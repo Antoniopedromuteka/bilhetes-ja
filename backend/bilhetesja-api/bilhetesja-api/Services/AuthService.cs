@@ -39,7 +39,8 @@ namespace bilhetesja_api.Services
 
         public async Task<AuthResponseDto> RegisterAsync(RegisterUserDto dto)
         {
-            if (await _userRepository.EmailExistsAsync(dto.Email))
+            var emailExists = await _userRepository.EmailExistsAsync(dto.Email);
+            if (emailExists)
                 throw new HttpException(400, "Email já está em uso.");
 
             var user = new User

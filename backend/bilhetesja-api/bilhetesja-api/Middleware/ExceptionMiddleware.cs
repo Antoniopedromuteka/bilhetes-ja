@@ -1,6 +1,7 @@
 ﻿namespace bilhetesja_api.Middlewares
 {
     using bilhetesja_api.DTOs.Auth;
+    using bilhetesja_api.Exceptions;
     using System.Net;
     using System.Text.Json;
 
@@ -26,11 +27,17 @@
                 _logger.LogWarning(ex, "Erro de autenticação.");
                 await HandleExceptionAsync(context, HttpStatusCode.Unauthorized, ex.Message);
             }
+            catch (HttpException ex)
+            {
+                _logger.LogWarning(ex, "Erro HTTP customizado.");
+                await HandleExceptionAsync(context, (HttpStatusCode)ex.StatusCode, ex.Message);
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Erro interno.");
                 await HandleExceptionAsync(context, HttpStatusCode.InternalServerError, "Ocorreu um erro interno.");
             }
+
         }
 
         private static Task HandleExceptionAsync(HttpContext context, HttpStatusCode statusCode, string message)

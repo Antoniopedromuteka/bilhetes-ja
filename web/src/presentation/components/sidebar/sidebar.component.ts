@@ -10,7 +10,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       id="sidebar"
       class="fixed top-0 left-0 z-20 w-64 h-full pt-0 flex flex-col bg-black  border-r border-primary"
     >
-      <div class="flex items-center text-white pl-4 space-x-2 h-16 ">
+      <div routerLink="/" class="flex cursor-pointer items-center text-white pl-4 space-x-2 h-16 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -40,7 +40,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             <a
               routerLink="/dashboard/home"
               routerLinkActive="bg-primary dark:bg-primary"
-              class="flex items-center p-2 text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
+              class="flex items-center cursor-pointer p-2 text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,11 +65,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
           <li routerLink="/dashboard/events"
           routerLinkActive="bg-primary dark:bg-primary"
-              class="flex items-center text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
+              class="flex items-center cursor-pointer text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
 
           >
             <button
-              class="flex items-center w-full p-2 text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
+              class="flex items-center cursor-pointer w-full p-2 text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-calendar-icon lucide-calendar"
+                class="lucide lucide-calendar-icon cursor-pointer lucide-calendar"
               >
                 <path d="M8 2v4" />
                 <path d="M16 2v4" />
@@ -94,11 +94,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
           <li routerLink="/dashboard/tickets"
           routerLinkActive="bg-primary dark:bg-primary"
-              class="flex items-center  text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
+              class="flex items-center cursor-pointer text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
 
           >
             <button
-              class="flex items-center w-full p-2 text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
+              class="flex items-center cursor-pointer w-full p-2 text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -125,11 +125,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
           <li routerLink="/dashboard/wallet"
           routerLinkActive="bg-primary dark:bg-primary"
-              class="flex items-center text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
+              class="flex items-center cursor-pointer! text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
 
           >
             <button
-              class="flex items-center w-full p-2 text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
+              class="flex items-center cursor-pointer w-full p-2 text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +156,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             <a
               routerLink="/dashboard/settings"
               routerLinkActive="bg-primary dark:bg-primary"
-              class="flex items-center p-2 text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
+              class="flex items-center p-2 cursor-pointer! text-base text-white rounded-lg hover:bg-primary dark:text-white dark:hover:bg-primary"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

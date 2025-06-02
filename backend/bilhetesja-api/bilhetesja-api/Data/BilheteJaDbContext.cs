@@ -13,6 +13,8 @@ namespace bilhetesja_api.Data
         public DbSet<Event> Events { get; set; }
         public DbSet<TicketType> TicketTypes { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
         public DbSet<Payment> Payments { get; set; }
         public DbSet<OrganizerRequest> OrganizerRequests { get; set; } = null!;
 

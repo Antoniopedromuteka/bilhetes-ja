@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { SearchComponent } from '../search/search.component';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { TokenService } from '../../../app/core/services/token.service';
 
 const COMPONENTS = [SearchComponent];
 
@@ -41,7 +42,7 @@ const COMPONENTS = [SearchComponent];
         <div class="w-full flex justify-end items-center xl:gap-5 gap-3">
           <app-search class="hidden md:flex md:flex-1 justify-end" />
           <button
-            routerLink="/auth/sign-in"
+            (click)="login()"
             class="flex w-[11rem] cursor-pointer xl:max-w-[170px] xl:w-full items-csnter gap-2 border py-2 px-6 rounded-md bg-primary text-white"
           >
             <svg
@@ -68,4 +69,17 @@ const COMPONENTS = [SearchComponent];
   styles: '',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  private authService = inject(TokenService);
+  private router = inject(Router);
+
+
+  login(){
+    if(!this.authService.isLoggedIn()){
+      this.router.navigate(['/auth/sign-in']);
+      return
+    }
+    this.router.navigate(['/dashboard']);
+  }
+
+}

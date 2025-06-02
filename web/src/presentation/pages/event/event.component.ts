@@ -9,7 +9,7 @@ const COMPONENTS = [CardEventComponent, SearchSectionComponent];
 @Component({
   selector: 'app-event',
   imports: [...COMPONENTS, ...MODULES],
-  template: `<main class="w-full h-[calc(100vh-64px)] h-auto mt-[64px]">
+  template: `<main class="w-full min-h-screen h-auto mt-[64px]">
     <section
       class="w-full max-w-[1280px] px-3 h-auto xl:px-0 mx-auto py-10"
     >
@@ -31,7 +31,7 @@ const COMPONENTS = [CardEventComponent, SearchSectionComponent];
       <app-card-event />
     </main>
     <div class="mt-10">
-      <mat-paginator [length]="100" [pageIndex]="0" [pageSize]="10" (page)="onPageChange($event)"></mat-paginator>
+      <mat-paginator  [length]="100" [pageIndex]="0" [pageSize]="10" (page)="onPageChange($event)"></mat-paginator>
     </div>
   </section>
   </main> `,

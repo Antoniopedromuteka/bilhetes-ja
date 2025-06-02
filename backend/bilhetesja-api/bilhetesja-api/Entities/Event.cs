@@ -18,9 +18,6 @@ namespace bilhetesja_api.Entities
 
         public string Descricao { get; set; } = string.Empty;
 
-        [MaxLength(100)]
-        public string Categoria { get; set; } = string.Empty;
-
         [MaxLength(255)]
         public string Local { get; set; } = string.Empty;
 
@@ -29,6 +26,8 @@ namespace bilhetesja_api.Entities
         public int LotacaoTotal { get; set; } = 0;
 
         public StatusEvento Status { get; set; } = StatusEvento.Pendente;
+        public int CategoriaId { get; set; }
+        public Category Categoria { get; set; } = new Category();
 
         public int OrganizadorId { get; set; }
         public User? Organizador { get; set; }
