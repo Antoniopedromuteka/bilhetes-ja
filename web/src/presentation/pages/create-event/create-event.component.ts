@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { HOW_CREATE_EVENT_MOCKS } from '../../../lib/mocks/howCreateEvent';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -107,7 +107,7 @@ const MODULES = [MatExpansionModule, ReactiveFormsModule];
                   placeholder="Nome"
                   formControlName="name"
                 />
-                @if(submitted && signUpForm.get('name')?.errors){
+                @if(submitted() && signUpForm.get('name')?.errors){
                 <span class="text-red-500 text-sm"> O nome é obrigatório </span>
                 }
               </div>
@@ -118,7 +118,7 @@ const MODULES = [MatExpansionModule, ReactiveFormsModule];
                   placeholder="E-mail"
                   formControlName="email"
                 />
-                @if(submitted && signUpForm.get('email')?.errors){
+                @if(submitted() && signUpForm.get('email')?.errors){
                 <span class="text-red-500 text-sm">
                   O e-mail é obrigatório
                 </span>
@@ -131,7 +131,7 @@ const MODULES = [MatExpansionModule, ReactiveFormsModule];
                   placeholder="Senha"
                   formControlName="password"
                 />
-                @if(submitted && signUpForm.get('password')?.errors){
+                @if(submitted() && signUpForm.get('password')?.errors){
                 <span class="text-red-500 text-sm">
                   A senha é obrigatória
                 </span>
@@ -144,9 +144,9 @@ const MODULES = [MatExpansionModule, ReactiveFormsModule];
                   placeholder="Confirmar Senha"
                   formControlName="confirmPassword"
                 />
-                @if(submitted && signUpForm.get('confirmPassword')?.invalid){
+                @if(submitted() && signUpForm.get('confirmPassword')?.invalid){
                 <div class="text-red-500 text-sm">Confirmação obrigatória</div>
-                } @if(submitted && signUpForm.get('confirmPassword')?.value !==
+                } @if(submitted() && signUpForm.get('confirmPassword')?.value !==
                 signUpForm.get('password')?.value){
                 <div class="text-red-500 text-sm">
                   As senhas devem ser iguais
@@ -159,7 +159,7 @@ const MODULES = [MatExpansionModule, ReactiveFormsModule];
                   >Aceito os Termos de Uso</label
                 >
               </div>
-              @if(submitted && !signUpForm.get('terms')?.value){
+              @if(submitted() && !signUpForm.get('terms')?.value){
                 <span class="text-red-500 text-sm">Você deve aceitar os termos</span>
               }
               <button
@@ -243,7 +243,7 @@ export class CreateEventComponent {
   public readonly faqsMocks = FAQS_MOCKS;
   private sanitizer: DomSanitizer = inject(DomSanitizer);
   private fb = inject(FormBuilder);
-  submitted = false;
+  submitted = signal<boolean>(false);
   private authService = inject(AuthService);
   private toastService = inject(ToastService);
   private tokenService = inject(TokenService);
@@ -260,7 +260,7 @@ export class CreateEventComponent {
   }
 
   onSubmit(): void {
-    this.submitted = true;
+    this.submitted.set(true);
     if (this.signUpForm.invalid) {
       return;
     }
@@ -273,7 +273,7 @@ export class CreateEventComponent {
 
     this.authService.registerUser(formData).subscribe({
       next: (response) => {
-        this.submitted = false;
+        this.submitted.set(false);
         this.tokenService.saveToken(response.token);
         this.signUpForm.reset();
         this.toastService.success('Cadastro realizado com sucesso.');
@@ -286,7 +286,7 @@ export class CreateEventComponent {
         const errorMessage =
           error.error?.Mensagem || 'Erro ao realizar o cadastro.!';
         this.toastService.error(errorMessage);
-        this.submitted = false;
+        this.submitted.set(false);
       },
     });
   }

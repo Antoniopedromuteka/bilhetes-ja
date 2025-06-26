@@ -17,8 +17,8 @@ namespace bilhetesja_api.Entities
 
         public DateTime DataUpload { get; set; }
 
-        public ICollection<Event>? Eventos { get; set; }
-        public ICollection<User>? Usuarios { get; set; }
+        public ICollection<Event> Eventos { get; set; } = new List<Event>();
+        public ICollection<User> Usuarios { get; set; } = new List<User>();
     }
 
 }

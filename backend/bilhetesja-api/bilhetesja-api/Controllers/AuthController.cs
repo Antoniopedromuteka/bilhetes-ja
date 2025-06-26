@@ -15,7 +15,7 @@ namespace bilhetesja_api.Controllers
         {
             _authService = authService;
         }
-
+        
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] AuthRequestDto dto)
         {

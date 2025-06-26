@@ -21,6 +21,12 @@ namespace bilhetesja_api.Data
         public DbSet<Wallet> Wallets { get; set; }
         public DbSet<WalletTransaction> WalletTransactions { get; set; }
         public DbSet<Image> Images { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
@@ -55,11 +61,23 @@ namespace bilhetesja_api.Data
            .HasForeignKey(u => u.ImagemId)
            .OnDelete(DeleteBehavior.SetNull);
 
+            modelBuilder.Entity<Category>()
+                .HasMany(c => c.Eventos)
+                .WithOne(e => e.Categoria)
+                .HasForeignKey(e => e.CategoriaId);
+
             modelBuilder.Entity<Event>()
            .HasOne(e => e.Imagem)
            .WithMany(i => i.Eventos)
            .HasForeignKey(e => e.ImagemId)
            .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Event>()
+              .HasOne(e => e.Organizador)
+              .WithMany(u => u.EventosOrganizados)
+                 .HasForeignKey(e => e.OrganizadorId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired(false); // Permite null se necessário
         }
 
     }

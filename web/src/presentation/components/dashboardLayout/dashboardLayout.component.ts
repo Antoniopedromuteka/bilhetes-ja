@@ -1,7 +1,10 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { HeaderDashComponent } from '../headerDash/headerDash.component';
+import { AuthService, ListUser } from '../../../app/core/services/auth.service';
+import { TokenService } from '../../../app/core/services/token.service';
+import { LoaderService } from '../../../app/core/services/loader.service';
 
 const COMPONENTS = [SidebarComponent, HeaderDashComponent];
 
@@ -13,7 +16,7 @@ const COMPONENTS = [SidebarComponent, HeaderDashComponent];
       <!-- Sidebar -->
       @if(isActiveMenu()){
       <aside class="w-64 absolute lg:relative top-0 left-0 h-full bg-white shadow-lg">
-        <app-sidebar></app-sidebar>
+        <app-sidebar debar></app-sidebar>
       </aside>
       }
 
@@ -40,11 +43,10 @@ const COMPONENTS = [SidebarComponent, HeaderDashComponent];
               <path d="M12 3v18" />
             </svg>
           </div>
-          <app-header-dash></app-header-dash>
+          <app-header-dash [user]="user()!"></app-header-dash>
         </header>
-
         <!-- Page content -->
-        <main class="flex-1 overflow-y-auto p-4 bg-white">
+        <main class="flex-1 overflow-y-auto p-4 bg-slate-50 2xl:max-w-[1550px] w-full 2xl:mx-auto">
           <router-outlet></router-outlet>
         </main>
       </div>
@@ -55,6 +57,30 @@ const COMPONENTS = [SidebarComponent, HeaderDashComponent];
 })
 export class DashboardLayoutComponent {
   isActiveMenu = signal<boolean>(true);
+  private authService = inject(AuthService)
+  private tokenService = inject(TokenService)
+  user = signal<ListUser | null>(null)
+  private router = inject(Router);
+  private loaderService = inject(LoaderService)
+
+  ngOnInit() {
+    this.loaderService.show()
+    this.authService.usersMe().subscribe({
+      next: (response) => {
+        this.user.set(response);
+        this.loaderService.hide()
+      },
+      error: (error) => {
+        this.logout()
+        this.loaderService.hide()
+      },
+    });
+  }
+
+  logout() {
+    this.tokenService.logout();
+    this.router.navigate(['/auth/sign-in']);
+  }
 
   toggleMenu() {
     this.isActiveMenu.set(!this.isActiveMenu());

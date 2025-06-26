@@ -11,6 +11,12 @@
             CreateMap<Event, EventReadDto>();
             CreateMap<EventCreateDto, Event>();
             CreateMap<EventUpdateDto, Event>();
+            CreateMap<Event, EventReadDto>();
+            CreateMap<Category, CategoryDto>();
+            CreateMap<User, UserDto>();
+            CreateMap<Image, ImageDto>();
+            CreateMap<TicketType, TipoBilheteDto>()
+                .ForMember(dest => dest.Preco, opt => opt.MapFrom(src => src.Preco.ToString("F2")));
         }
     }
 

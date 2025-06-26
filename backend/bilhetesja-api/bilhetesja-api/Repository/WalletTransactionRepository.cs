@@ -12,7 +12,7 @@ namespace bilhetesja_api.Repository
 
         public async Task AddAsync(WalletTransaction transaction)
         {
-            _context.WalletTransactions.Add(transaction);
+            await _context.WalletTransactions.AddAsync(transaction);
             await _context.SaveChangesAsync();
         }
     }

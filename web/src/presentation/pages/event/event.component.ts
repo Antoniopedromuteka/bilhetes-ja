@@ -1,7 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { CardEventComponent } from '../../components/cardEvent/cardEvent.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { SearchSectionComponent } from '../../components/searchSection/searchSection.component';
+import { LoaderService } from '../../../app/core/services/loader.service';
+import { EventService } from '../../../app/core/services/event.service';
+import { Event } from '../../../domain/models/event';
 
 const MODULES = [MatPaginatorModule];
 const COMPONENTS = [CardEventComponent, SearchSectionComponent];
@@ -16,22 +19,17 @@ const COMPONENTS = [CardEventComponent, SearchSectionComponent];
     <div class="w-full flex items-center justify-between mt-10">
       <h3 class="text-3xl font-semibold">Próximos Eventos</h3>
       <div class="text-slate-500 text-lg">
-        6 eventos encontrados
+        {{ events().length }} eventos encontrados
       </div>
     </div>
     <app-search-section />
     <main class="w-full mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 h-auto">
-      <app-card-event />
-      <app-card-event />
-      <app-card-event />
-      <app-card-event />
-      <app-card-event />
-      <app-card-event />
-      <app-card-event />
-      <app-card-event />
+      @for (event of events(); track event.id) {
+        <app-card-event [event]="event" />
+      }
     </main>
     <div class="mt-10">
-      <mat-paginator  [length]="100" [pageIndex]="0" [pageSize]="10" (page)="onPageChange($event)"></mat-paginator>
+      <!-- <mat-paginator  [length]="100" [pageIndex]="0" [pageSize]="10" (page)="onPageChange($event)"></mat-paginator> -->
     </div>
   </section>
   </main> `,
@@ -39,6 +37,23 @@ const COMPONENTS = [CardEventComponent, SearchSectionComponent];
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EventComponent {
+  public events = signal<Event[]>([]);
+  private isLoading = inject(LoaderService)
+  private eventService = inject(EventService);
+
+  ngOnInit() {
+    this.isLoading.show()
+    this.eventService.getEvents().subscribe({
+      next: (response) => {
+        this.events.set(response);
+        this.isLoading.hide()
+      },
+      error: (error) => {
+        console.error('Error fetching events:', error);
+        this.isLoading.hide()
+      },
+    });
+  }
 
   onPageChange(event: any) {
     console.log('Page changed to: ', event.pageIndex);

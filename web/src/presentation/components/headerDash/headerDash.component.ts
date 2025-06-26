@@ -1,8 +1,7 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input, signal } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { AuthService, ListUser } from '../../../app/core/services/auth.service';
+import { ListUser } from '../../../app/core/services/auth.service';
 import { TokenService } from '../../../app/core/services/token.service';
-import { LoaderService } from '../../../app/core/services/loader.service';
 
 @Component({
   selector: 'app-header-dash',
@@ -11,7 +10,7 @@ import { LoaderService } from '../../../app/core/services/loader.service';
     <div class="flex items-center justify-end relative">
       <div class="flex flex-col">
         <div (click)="toggleActive()" class="flex items-center gap-2 cursor-pointer">
-          <span>olá, {{ user()?.nome }}</span>
+          <span>olá, {{ user!.nome }}</span>
           <div
             class="w-10 h-10 rounded-full bg-gray-950 flex items-center justify-center"
           ></div>
@@ -20,8 +19,8 @@ import { LoaderService } from '../../../app/core/services/loader.service';
         @if(isActive()){
         <div class="flex flex-col space-y-2 cursor-pointer h-auto w-[14rem] items-center absolute top-[3.4rem] right-0 bg-white shadow-lg rounded-lg p-4">
           <div class="flex flex-col items-center">
-          <span class="text-xs">{{ user()?.nome }}</span>
-          <span class="text-sm">{{ user()?.email }}</span>
+          <span class="text-xs">{{ user!.nome }}</span>
+          <span class="text-sm">{{ user!.email }}</span>
           </div>
           <div class="w-full h-auto flex flex-col gap-2 border-t-2 border-gray-200 pt-2">
             <ul class="flex flex-col gap-2">
@@ -44,29 +43,10 @@ import { LoaderService } from '../../../app/core/services/loader.service';
 })
 export class HeaderDashComponent {
   isActive = signal<boolean>(false);
-  private authService = inject(AuthService)
   private tokenService = inject(TokenService)
-  user = signal<ListUser | null>(null)
+  @Input() user!: ListUser
   private router = inject(Router);
-  private loaderService = inject(LoaderService)
 
-  ngOnInit() {
-    this.loaderService.show()
-    this.authService.usersMe().subscribe({
-      next: (response) => {
-        this.user.set(response);
-      },
-      error: (error) => {
-        console.error(error);
-        this.logout()
-      },
-      complete: () => {
-        setTimeout(() => {
-          this.loaderService.hide()
-        }, 1000)
-      }
-    });
-  }
   toggleActive() {
     this.isActive.set(!this.isActive());
   }

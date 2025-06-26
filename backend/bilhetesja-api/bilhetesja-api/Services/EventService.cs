@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using bilhetesja_api.DTOs.Event;
 using bilhetesja_api.Entities;
+using bilhetesja_api.Exceptions;
 using bilhetesja_api.Repository.Interfaces;
 using bilhetesja_api.Services.Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace bilhetesja_api.Services
 {
@@ -31,6 +33,11 @@ namespace bilhetesja_api.Services
 
         public async Task<EventReadDto> CreateAsync(EventCreateDto dto)
         {
+            var organizer = await _repository.GetByOrganizerIdAsync(dto.OrganizadorId);
+            if (organizer == null) throw new HttpException(400, "Organizador não encontrado");
+
+            var categoria = await _repository.GetByCategoryIdAsync(dto.CategoriaId);
+            if (categoria == null) throw new HttpException(400, "Categoria não encontrada");
             var evento = _mapper.Map<Event>(dto);
             await _repository.CreateAsync(evento);
             await _repository.SaveChangesAsync();
@@ -54,6 +61,21 @@ namespace bilhetesja_api.Services
 
             await _repository.DeleteAsync(id);
             return await _repository.SaveChangesAsync();
+        }
+
+
+        public async Task<IEnumerable<EventReadDto>> GetEventByCategoryAsync(int categoryId)
+        {
+            var categoria = await _repository.GetByCategoryIdAsync(categoryId);
+            if (categoria == null) throw new HttpException(404, "Categoria não encontrada");
+            var eventos = await _repository.GetEventByCategory(categoryId);
+            return _mapper.Map<IEnumerable<EventReadDto>>(eventos);
+        }
+
+        public async Task<IEnumerable<EventReadDto>> GetByFilterAsync(EventFilterDTO filtro)
+        {
+            var events = await _repository.GetByFilterAsync(filtro);
+            return _mapper.Map<IEnumerable<EventReadDto>>(events);
         }
     }
 

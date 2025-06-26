@@ -48,12 +48,12 @@ builder.Services.AddScoped<IWalletRepository, WalletRepository>();
 builder.Services.AddScoped<IWalletTransactionRepository, WalletTransactionRepository>();
 builder.Services.AddScoped<ITicketRepository, TicketRepository>();
 builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddScoped<IStripeService, StripeService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-
-
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IEventRepository, EventRepository>();
 
 
 builder.Services.AddScoped<IAuthService, AuthService>();
@@ -98,9 +98,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.WebHost.UseUrls("http://localhost:5000");
 
 var app = builder.Build();
 app.UseCors("AllowLocalhost4200");
+app.UseHttpsRedirection();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
@@ -118,11 +120,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
-app.UseHttpsRedirection();
 app.UseMiddleware<ExceptionMiddleware>();
+
+
+app.UseAuthentication();
 app.UseAuthorization();
-app.UseAuthorization();
+
 
 
 app.MapControllers();

@@ -78,12 +78,26 @@ export const routes: Routes = [
           ).then((m) => m.CategoryDetailsComponent),
       },
       {
-        path: 'search/:searchTerm',
+        path: 'search',
         loadComponent: () =>
           import('../presentation/pages/search/search.component').then(
             (m) => m.SearchComponent
           ),
       },
+      {
+        path: 'checkout/:ticketId',
+        loadComponent: () =>
+          import('../presentation/pages/checkout/checkout.component').then(
+            (m) => m.CheckoutComponent
+          ),
+      },
+      {
+        path: 'ticket/:id',
+        loadComponent: () =>
+          import('../presentation/pages/ticket/ticket.component').then(
+            (m) => m.TicketComponent
+          ),
+      }
     ],
   },
 

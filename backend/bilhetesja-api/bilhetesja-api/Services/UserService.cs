@@ -75,7 +75,23 @@ namespace bilhetesja_api.Services
                 Email = user.Email,
                 Telefone = user.Telefone,
                 TipoUsuario = user.TipoUsuario.ToString(),
-                ImagemUrl = user.Imagem?.Url
+                ImagemUrl = user.Imagem?.Url,
+                Carteira = user.Carteira == null ? null : new WalletDto
+                {
+                    Id = user.Carteira.Id,
+                    Saldo = user.Carteira.SaldoDisponivel
+                },
+                EventosOrganizados = user.EventosOrganizados.Select(e => new EventoResumoDto
+                {
+                    Id = e.Id,
+                    Nome = e.Nome,
+                    Data = e.DataEvento
+                }).ToList(),
+                TicketsComprados = user.TicketsComprados.Select(t => new TicketResumoDto
+                {
+                    Id= t.Id,
+                    Codigo = t.CodigoQR,
+                }).ToList(),
             };
         }
 

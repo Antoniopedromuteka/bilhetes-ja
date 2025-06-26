@@ -15,7 +15,7 @@ namespace bilhetesja_api.Repository
 
         public async Task AddAsync(Wallet wallet)
         {
-            _context.Wallets.Add(wallet);
+            await _context.Wallets.AddAsync(wallet);
             await _context.SaveChangesAsync();
         }
 
@@ -23,6 +23,34 @@ namespace bilhetesja_api.Repository
         {
             _context.Wallets.Update(wallet);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateBalanceAsync(int walletId, decimal amountToAdd)
+        {
+            await _context.Database.ExecuteSqlInterpolatedAsync(
+                $"UPDATE Wallets SET SaldoDisponivel = SaldoDisponivel + {amountToAdd} WHERE Id = {walletId}"
+            );
+        }
+
+        public async Task<int> GetOrCreateWalletIdAsync(int userId)
+        {
+            var walletId = await _context.Wallets
+                .Where(w => w.UsuarioId == userId)
+                .Select(w => w.Id)
+                .FirstOrDefaultAsync();
+
+            if (walletId > 0) return walletId;
+
+            var newWallet = new Wallet
+            {
+                UsuarioId = userId,
+                SaldoDisponivel = 0
+            };
+
+            _context.Wallets.Add(newWallet);
+            await _context.SaveChangesAsync();
+
+            return newWallet.Id;
         }
     }
 }

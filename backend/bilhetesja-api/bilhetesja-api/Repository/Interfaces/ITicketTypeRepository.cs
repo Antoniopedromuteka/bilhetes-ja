@@ -9,6 +9,14 @@ namespace bilhetesja_api.Repository.Interfaces
         Task AddAsync(TicketType ticketType);
         Task<bool> SaveChangesAsync();
         void Delete(TicketType ticketType);
+
+        Task UpadteAsync(TicketType ticketType);
+
+        Task <TicketType?> GetByIdWithoutRastrAsync(int id);
+
+        Task<TicketType?> GetByIdWithoutRelationsAsync(int id);
+        Task UpdateQuantityOnlyAsync(int id, int newQuantity);
+
     }
 
 }

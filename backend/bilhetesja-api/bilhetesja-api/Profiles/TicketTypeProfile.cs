@@ -9,7 +9,8 @@ namespace bilhetesja_api.Profiles
         public TicketTypeProfile()
         {
             CreateMap<TicketType, TicketTypeReadDto>()
-                .ForMember(dest => dest.EventoNome, opt => opt.MapFrom(src => src.Evento.Nome ));
+                .ForMember(dest => dest.EventoNome, opt => opt.MapFrom(src => src.Evento!.Nome ))
+                .ForMember(dest => dest.Event, opt => opt.MapFrom(src => src.Evento));
             CreateMap<TicketTypeCreateDto, TicketType>();
             CreateMap<TicketTypeUpdateDto, TicketType>();
         }

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService, LoginPayload } from '../../../../app/core/services/auth.service';
@@ -32,7 +32,7 @@ import { HttpErrorResponse } from '@angular/common/http';
               class="w-full border border-gray-300 rounded-md px-3 py-2 mt-2"
               placeholder="Insira seu email"
             />
-            @if(submitted && signInForm.get('email')?.invalid && signInForm.get('email')?.touched){
+            @if(submitted() && signInForm.get('email')?.invalid && signInForm.get('email')?.touched){
                 <span class="text-red-500 text-sm">O email é inválido</span>
             }
           </div>
@@ -50,13 +50,13 @@ import { HttpErrorResponse } from '@angular/common/http';
                 >Esqueci minha senha</span
               >
             </div>
-            @if(submitted && signInForm.get('senha')?.invalid && signInForm.get('senha')?.touched){
+            @if(submitted() && signInForm.get('senha')?.invalid && signInForm.get('senha')?.touched){
                 <span class="text-red-500 text-sm">A senha é obrigatória</span>
             }
           </div>
           <div class="flex flex-col gap-1">
             <button
-              [disabled]="submitted"
+              [disabled]="submitted()"
               type="submit"
               class="w-full bg-primary text-white py-2 mt-4 rounded-md cursor-pointer"
             >
@@ -80,7 +80,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class SignInComponent {
   signInForm: FormGroup;
-  submitted = false;
+  submitted = signal<boolean>(false);
   private router = inject(Router);
   private fb = inject(FormBuilder);
   private authService = inject(AuthService);
@@ -95,10 +95,11 @@ export class SignInComponent {
   }
 
   onSubmit(): void {
-    this.submitted = true;
     if (this.signInForm.invalid) {
       return;
     }
+
+    this.submitted.set(true);
 
     const formData: LoginPayload = {
       email: this.signInForm.get('email')?.value,
@@ -110,17 +111,19 @@ export class SignInComponent {
         this.toastService.success('Login realizado com sucesso.');
         this.tokenService.saveToken(response.token)
         this.signInForm.reset();
-        this.submitted = false;
+        this.submitted.set(false);
         setTimeout(() => {
-          this.router.navigate(['/dashboard/events']);
+          this.router.navigate(['/dashboard/home']);
         }, 1000)
       },
       error: (error: HttpErrorResponse) => {
         console.error(error);
+        this.submitted.set(false);
         const errorMessage = error.error?.Mensagem || "Erro ao realizar o login.!";
         this.toastService.error(errorMessage);
-      }
+      },
     });
+
   }
 
 }

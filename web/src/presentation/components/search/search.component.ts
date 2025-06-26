@@ -1,4 +1,14 @@
-import { ChangeDetectionStrategy, Component, ElementRef, HostListener, inject, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  HostListener,
+  ViewChild,
+  inject,
+  signal,
+  OnInit
+} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -25,7 +35,13 @@ import { ChangeDetectionStrategy, Component, ElementRef, HostListener, inject, s
         <circle cx="11" cy="11" r="8" />
         <path d="m21 21-4.3-4.3" />
       </svg>
-      <input type="search" placeholder="Pesquisar eventos..." class="outline-none w-full" />
+      <input
+        #searchInput
+        type="search"
+        (keydown.enter)="onEnter()"
+        placeholder="Pesquisar eventos..."
+        class="outline-none w-full"
+      />
     </div>
   `,
   styles: '',
@@ -34,10 +50,14 @@ import { ChangeDetectionStrategy, Component, ElementRef, HostListener, inject, s
 export class SearchComponent {
   public isActive = signal<boolean>(false);
   private elementRef: ElementRef = inject(ElementRef);
+  public searchTerm = signal<string>('');
+  public router = inject(Router);
 
+  @ViewChild('searchInput', { static: false }) searchInput!: ElementRef<HTMLInputElement>;
 
   toggleSearch() {
     this.isActive.set(!this.isActive());
+    setTimeout(() => this.searchInput?.nativeElement.focus(), 0);
   }
 
   @HostListener('document:click', ['$event'])
@@ -45,5 +65,14 @@ export class SearchComponent {
     if (!this.elementRef.nativeElement.contains(event.target)) {
       this.isActive.set(false);
     }
+  }
+
+  onEnter() {
+    const term = this.searchInput?.nativeElement.value.trim();
+      this.searchTerm.set(term);
+      this.router.navigate(['/search'], {
+        queryParams: { q: term || null },
+      });
+      this.isActive.set(false);
   }
 }

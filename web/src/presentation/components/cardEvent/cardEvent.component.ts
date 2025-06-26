@@ -1,17 +1,18 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Event } from '../../../domain/models/event';
 
 @Component({
   selector: 'app-card-event',
   imports: [RouterLink],
   template: `
     <section
-      routerLink="/event/3"
-      class="max-w-[410px] cursor-pointer w-full h-[372px] bg-gray-50 rounded-md flex flex-col"
+      [routerLink]="'/event/' + event.id"
+      class="md:max-w-[410px] cursor-pointer w-full h-[372px] bg-gray-50 rounded-md flex flex-col"
     >
       <div class="w-full h-[192px] bg-black rounded-t-md"></div>
       <div class="pt-8 px-3 h-auto flex flex-col gap-3">
-        <h2 class="font-medium">Event Title</h2>
+        <h2 class="font-medium">{{ event.nome }}</h2>
         <p class="text-sm flex items-center gap-1 text-slate-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -30,11 +31,13 @@ import { RouterLink } from '@angular/router';
             <rect width="18" height="18" x="3" y="4" rx="2" />
             <path d="M3 10h18" />
           </svg>
-          <span>15 Mar 2024</span>
+          <span>{{ formatDate(event.dataEvento.toString()) }}</span>
         </p>
-        <p class="text-sm text-slate-500">Almada, Setubal, Portugal</p>
+        <p class="text-sm text-slate-500">{{ event.local }}</p>
         <a href="">
-          <p class="text-base text-primary font-medium">A partir de 20€</p>
+          @if(this.arrayPrice().length > 1){
+            <p class="text-base text-primary font-medium">A partir de {{ this.min() }}€</p>
+          }
         </a>
       </div>
     </section>
@@ -42,4 +45,25 @@ import { RouterLink } from '@angular/router';
   styles: '',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CardEventComponent {}
+export class CardEventComponent {
+  @Input() event!: Event
+  arrayPrice = signal<number[]>([]);
+  min = signal(0);
+  constructor() { }
+
+  ngOnInit(){
+    console.log(this.event, ":::::::::");
+    this.event.tiposBilhetes?.forEach((element) => {
+      this.arrayPrice.set([...this.arrayPrice(), element.preco])
+    })
+    this.min.set(Math.min(...this.arrayPrice()));
+  }
+  formatDate(date: string): string {
+    const options: Intl.DateTimeFormatOptions = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    };
+    return new Date(date).toLocaleDateString('pt-PT', options);
+  }
+}

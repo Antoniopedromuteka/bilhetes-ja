@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, signal } from "@angular/core";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 import { Router, RouterLink } from "@angular/router";
 import { AuthService, RegisterPayload } from "../../../../app/core/services/auth.service";
@@ -25,7 +25,7 @@ import { TokenService } from "../../../../app/core/services/token.service";
           <div>
             <label for="name">Nome</label>
             <input type="text" id="name" formControlName="name" class="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Insira seu nome"/>
-            @if(submitted && signUpForm.get('name')?.invalid){
+            @if(submitted() && signUpForm.get('name')?.invalid){
               <div class="text-red-500 text-sm">Nome é obrigatório</div>
             }
           </div>
@@ -33,7 +33,7 @@ import { TokenService } from "../../../../app/core/services/token.service";
           <div>
             <label for="email">Email</label>
             <input type="email" id="email" formControlName="email" class="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Insira seu email"/>
-            @if(submitted && signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched){
+            @if(submitted() && signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched){
                 <div class="text-red-500 text-sm">O email é inválido</div>
             }
           </div>
@@ -41,7 +41,7 @@ import { TokenService } from "../../../../app/core/services/token.service";
           <div>
             <label for="password">Senha</label>
             <input type="password" id="password" formControlName="password" class="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Insira sua senha"/>
-            @if(submitted && signUpForm.get('password')?.invalid){
+            @if(submitted() && signUpForm.get('password')?.invalid){
               <div class="text-red-500 text-sm">Senha é obrigatória</div>
             }
           </div>
@@ -49,10 +49,10 @@ import { TokenService } from "../../../../app/core/services/token.service";
           <div>
             <label for="confirmPassword">Confirmar Senha</label>
             <input type="password" id="confirmPassword" formControlName="confirmPassword" class="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Confirme sua senha"/>
-            @if(submitted && signUpForm.get('confirmPassword')?.invalid){
+            @if(submitted() && signUpForm.get('confirmPassword')?.invalid){
               <div class="text-red-500 text-sm">Confirmação obrigatória</div>
             }
-            @if(submitted && signUpForm.get('confirmPassword')?.value !== signUpForm.get('password')?.value){
+            @if(submitted() && signUpForm.get('confirmPassword')?.value !== signUpForm.get('password')?.value){
                 <div class="text-red-500 text-sm">As senhas devem ser iguais</div>
             }
           </div>
@@ -62,12 +62,12 @@ import { TokenService } from "../../../../app/core/services/token.service";
             <input type="checkbox" id="terms" formControlName="terms" />
             <label class="text-sm text-slate-600 font-medium" for="terms">Aceito os Termos de Uso</label>
             </div>
-            @if(submitted && !signUpForm.get('terms')?.value){
+            @if(submitted() && !signUpForm.get('terms')?.value){
               <div class="text-red-500 text-sm">Você deve aceitar os termos</div>
             }
           </div>
           <div class="flex w-full flex-col gap-1">
-            <button [disabled]="submitted" type="submit" class="w-full bg-primary text-white py-2 mt-4 rounded-md cursor-pointer">
+            <button [disabled]="submitted()" type="submit" class="w-full bg-primary text-white py-2 mt-4 rounded-md cursor-pointer">
               Registrar
             </button>
             <div class="flex justify-end items-center gap-1">
@@ -84,7 +84,7 @@ import { TokenService } from "../../../../app/core/services/token.service";
 })
 export class SignUpComponent {
   signUpForm: FormGroup;
-  submitted = false;
+  submitted = signal<boolean>(false);
   private router = inject(Router);
   private fb = inject(FormBuilder);
   private authService = inject(AuthService);
@@ -102,7 +102,7 @@ export class SignUpComponent {
   }
 
   onSubmit(): void {
-    this.submitted = true;
+    this.submitted.set(true);
     if (this.signUpForm.invalid) {
       return;
     }
@@ -118,7 +118,7 @@ export class SignUpComponent {
         this.toastService.success('Cadastro realizado com sucesso.');
         this.tokenService.saveToken(response.token)
         this.signUpForm.reset();
-        this.submitted = false;
+        this.submitted.set(false);
         setTimeout(() => {
           this.router.navigate(['/dashboard/events']);
         }, 1000)
@@ -127,7 +127,7 @@ export class SignUpComponent {
         console.error(error);
         const errorMessage = error.error?.Mensagem || "Erro ao realizar o cadastro.!";
         this.toastService.error(errorMessage);
-        this.submitted = false;
+        this.submitted.set(false);
       }
     });
   }

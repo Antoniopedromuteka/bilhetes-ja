@@ -7,5 +7,9 @@ namespace bilhetesja_api.Repository.Interfaces
         Task<Wallet?> GetByUserIdAsync(int userId);
         Task AddAsync(Wallet wallet);
         Task UpdateAsync(Wallet wallet);
+
+        Task UpdateBalanceAsync(int id, decimal amountToAdd);
+
+        Task <int> GetOrCreateWalletIdAsync(int id);
     }
 }

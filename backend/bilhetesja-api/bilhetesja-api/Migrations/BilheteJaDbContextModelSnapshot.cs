@@ -350,7 +350,7 @@ namespace bilhetesja_api.Migrations
                     b.HasOne("bilhetesja_api.Entities.User", "Organizador")
                         .WithMany("EventosOrganizados")
                         .HasForeignKey("OrganizadorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Categoria");

@@ -5,16 +5,16 @@ namespace bilhetesja_api.DTOs.Payment
     public class CreatePaymentRequestDto
     {
         [Required, EmailAddress]
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
 
         [Required]
-        public string Nome { get; set; }
+        public string Nome { get; set; } = string.Empty;
 
         [Required]
         public int TicketTypeId { get; set; }
 
         [Required]
-        public string PaymentMethodId { get; set; } // ID gerado pelo Stripe
+        public string PaymentMethodId { get; set; } = string.Empty; // ID gerado pelo Stripe
     }
 
 }

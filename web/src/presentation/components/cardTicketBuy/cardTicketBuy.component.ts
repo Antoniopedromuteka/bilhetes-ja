@@ -1,4 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, inject, Input, input, Output } from '@angular/core';
+import { ticket } from '../../../domain/models/event';
+import { FormatMoneyService } from '../../../app/core/services/formatMoney.service';
+
 
 @Component({
   selector: 'app-card-ticket-buy',
@@ -7,16 +10,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     <div class="border border-gray-200 p-3 rounded-md">
       <div class="flex items-center justify-between">
         <div class="flex flex-col gap-2">
-          <span class="text-slate-600 font-medium">Valor Normal</span>
+          <span class="text-slate-600 font-medium">{{ ticket.nome }}</span>
           <span class="text-start text-slate-500 text-sm"
-            >500 ingressos disponíveis</span
+            >{{ ticket.quantidade }} ingressos disponíveis</span
           >
         </div>
         <div>
-          <span class="text-start text-primary font-medium">R$ 50,00</span>
+          <span class="text-start text-primary font-medium">{{ formatService.formatEuro(ticket.preco) }}</span>
         </div>
       </div>
       <button
+          (click)="openModalEvent()"
         class="w-full mt-4 bg-primary text-white rounded-md py-2 flex items-center justify-center gap-2 cursor-pointer"
       >
         <svg
@@ -45,4 +49,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styles: '',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CardTicketBuyComponent {}
+export class CardTicketBuyComponent {
+  @Input() ticket!: ticket;
+  @Output() openModal = new EventEmitter<void>();
+  formatService = inject(FormatMoneyService)
+
+
+  openModalEvent() {
+    this.openModal.emit();
+  }
+
+}

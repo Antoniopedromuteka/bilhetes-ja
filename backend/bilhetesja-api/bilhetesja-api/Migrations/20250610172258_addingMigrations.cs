@@ -6,11 +6,25 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace bilhetesja_api.Migrations
 {
     /// <inheritdoc />
-    public partial class createtables : Migration
+    public partial class addingMigrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Categories",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Nome = table.Column<string>(type: "TEXT", nullable: false),
+                    IconUrl = table.Column<string>(type: "TEXT", maxLength: 500, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categories", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Images",
                 columns: table => new
@@ -60,17 +74,23 @@ namespace bilhetesja_api.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Nome = table.Column<string>(type: "TEXT", maxLength: 255, nullable: false),
                     Descricao = table.Column<string>(type: "TEXT", nullable: false),
-                    Categoria = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
                     Local = table.Column<string>(type: "TEXT", maxLength: 255, nullable: false),
                     DataEvento = table.Column<DateTime>(type: "TEXT", nullable: false),
                     LotacaoTotal = table.Column<int>(type: "INTEGER", nullable: false),
                     Status = table.Column<int>(type: "INTEGER", nullable: false, defaultValue: 0),
+                    CategoriaId = table.Column<int>(type: "INTEGER", nullable: false),
                     OrganizadorId = table.Column<int>(type: "INTEGER", nullable: false),
                     ImagemId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Events", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Events_Categories_CategoriaId",
+                        column: x => x.CategoriaId,
+                        principalTable: "Categories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Events_Images_ImagemId",
                         column: x => x.ImagemId,
@@ -82,7 +102,7 @@ namespace bilhetesja_api.Migrations
                         column: x => x.OrganizadorId,
                         principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -238,6 +258,11 @@ namespace bilhetesja_api.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Events_CategoriaId",
+                table: "Events",
+                column: "CategoriaId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Events_ImagemId",
                 table: "Events",
                 column: "ImagemId");
@@ -329,6 +354,9 @@ namespace bilhetesja_api.Migrations
 
             migrationBuilder.DropTable(
                 name: "Events");
+
+            migrationBuilder.DropTable(
+                name: "Categories");
 
             migrationBuilder.DropTable(
                 name: "Users");

@@ -20,10 +20,18 @@ export const DASHBOARD_ROUTES: Routes = [
       },
       {
         path: 'events',
-        loadComponent: () => import('../presentation/pages/dashboard/eventDash/eventDash.component').then((m) => m.EventDashComponent)
+        loadComponent: () => import('../presentation/pages/dashboard/eventDash/eventDash.component').then((m) => m.EventDashComponent),
       },
       {
-        path: 'settings',
+        path: 'events/new',
+        loadComponent: () => import('../presentation/pages/dashboard/eventDash/new/new.component').then((m) => m.NewComponent)
+      },
+      {
+        path: 'events/update',
+        loadComponent: () => import('../presentation/pages/dashboard/eventDash/edit/edit.component').then((m) => m.EditComponent)
+      },
+      {
+        path: 'profile',
         loadComponent: () => import('../presentation/pages/dashboard/settings/settings.component').then((m) => m.SettingsComponent)
       },
       {

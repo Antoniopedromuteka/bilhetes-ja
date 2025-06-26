@@ -11,8 +11,8 @@ using bilhetesja_api.Data;
 namespace bilhetesja_api.Migrations
 {
     [DbContext(typeof(BilheteJaDbContext))]
-    [Migration("20250602143748_AddCategoryMaxlenght")]
-    partial class AddCategoryMaxlenght
+    [Migration("20250610172258_addingMigrations")]
+    partial class addingMigrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -353,7 +353,7 @@ namespace bilhetesja_api.Migrations
                     b.HasOne("bilhetesja_api.Entities.User", "Organizador")
                         .WithMany("EventosOrganizados")
                         .HasForeignKey("OrganizadorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Categoria");

@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace bilhetesja_api.Services
 {
-   
+
     public class EmailService : IEmailService
     {
         private readonly IConfiguration _configuration;
@@ -17,6 +17,12 @@ namespace bilhetesja_api.Services
 
         public async Task SendEmailAsync(string to, string subject, string body)
         {
+            var sender = _configuration["Email:Smtp:Sender"];
+            if (string.IsNullOrWhiteSpace(sender))
+                throw new Exception("O campo 'Sender' está vazio ou nulo.");
+
+            Console.WriteLine("Sender carregado: " + sender);
+
             var smtpClient = new SmtpClient(_configuration["Email:Smtp:Host"])
             {
                 Port = int.Parse(_configuration["Email:Smtp:Port"]!),
@@ -29,7 +35,7 @@ namespace bilhetesja_api.Services
 
             var mailMessage = new MailMessage
             {
-                From = new MailAddress(_configuration["Email:Smtp:Sender"]!),
+                From = new MailAddress(sender),
                 Subject = subject,
                 Body = body,
                 IsBodyHtml = true

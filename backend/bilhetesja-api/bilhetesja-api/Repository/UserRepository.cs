@@ -18,17 +18,22 @@ namespace bilhetesja_api.Repository
             await _context.Users.Include(U => U.Imagem).ToListAsync();
 
         public async Task<User?> GetByIdAsync(int id) =>
-            await _context.Users.Include(U => U.Imagem).FirstOrDefaultAsync(U => U.Id == id);
+            await _context.Users.Include(U => U.Imagem).Include(U => U.TicketsComprados).Include(U => U.Carteira).FirstOrDefaultAsync(U => U.Id == id);
 
         public async Task CreateAsync(User user)
         {
-            _context.Users.Add(user);
+            await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
         }
 
         public async Task UpdateAsync(User user)
         {
-            _context.Users.Update(user);
+            if (await _context.Users.AnyAsync(u => u.Email == user.Email && u.Id != user.Id))
+            {
+                throw new InvalidOperationException("E-mail já está em uso");
+            }
+
+            _context.Entry(user).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 
@@ -51,6 +56,22 @@ namespace bilhetesja_api.Repository
         {
             return await _context.Users.SingleOrDefaultAsync(u => u.Email == email);
         }
-    }
 
+        public async Task<User?> GetOrganizerByEventIdAsync(int eventId)
+        {
+            return await _context.Events
+                .Where(e => e.Id == eventId)
+                .Select(e => e.Organizador)
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task<int> GetIdByEmailAsync(string email)
+        {
+            return await _context.Users
+                .Where(u => u.Email == email)
+                .Select(u => u.Id)
+                .FirstOrDefaultAsync();
+        }
+
+    }
 }

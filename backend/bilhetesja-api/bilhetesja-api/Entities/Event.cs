@@ -25,9 +25,9 @@ namespace bilhetesja_api.Entities
 
         public int LotacaoTotal { get; set; } = 0;
 
-        public StatusEvento Status { get; set; } = StatusEvento.Pendente;
+        public StatusEvento Status { get; set; } = StatusEvento.Aprovado;
         public int CategoriaId { get; set; }
-        public Category Categoria { get; set; } = new Category();
+        public Category? Categoria { get; set; }
 
         public int OrganizadorId { get; set; }
         public User? Organizador { get; set; }
@@ -35,7 +35,7 @@ namespace bilhetesja_api.Entities
         public int? ImagemId { get; set; }
         public Image? Imagem { get; set; }
 
-        public ICollection<TicketType> TiposBilhetes { get; set; } = new List<TicketType>();
+        public ICollection<TicketType>? TiposBilhetes { get; set; } = new List<TicketType>();
     }
 
 }

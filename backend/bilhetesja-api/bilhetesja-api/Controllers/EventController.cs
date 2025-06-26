@@ -27,6 +27,13 @@ namespace bilhetesja_api.Controllers
             return evento == null ? NotFound() : Ok(evento);
         }
 
+        [HttpGet("category/{categoryId}")]
+        public async Task<ActionResult<IEnumerable<EventReadDto>>> GetByCategory(int categoryId)
+        {
+            var eventos = await _service.GetEventByCategoryAsync(categoryId);
+            return Ok(eventos);
+        }
+
         [Authorize]
         [HttpPost]
         public async Task<ActionResult<EventReadDto>> Create(EventCreateDto dto)
@@ -49,6 +56,13 @@ namespace bilhetesja_api.Controllers
         {
             var success = await _service.DeleteAsync(id);
             return success ? NoContent() : NotFound();
+        }
+
+        [HttpGet("pesquisar")]
+        public async Task<IActionResult> BuscarEventos([FromQuery] EventFilterDTO filtro)
+        {
+            var eventos = await _service.GetByFilterAsync(filtro);
+            return Ok(eventos);
         }
     }
 
