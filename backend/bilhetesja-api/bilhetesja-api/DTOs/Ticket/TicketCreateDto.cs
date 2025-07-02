@@ -1,4 +1,6 @@
-﻿using bilhetesja_api.Entities;
+﻿using bilhetesja_api.DTOs.Event;
+using bilhetesja_api.DTOs.TicketType;
+using bilhetesja_api.Entities;
 
 namespace bilhetesja_api.DTOs.Ticket
 {
@@ -17,6 +19,9 @@ namespace bilhetesja_api.DTOs.Ticket
         public int UsuarioId { get; set; } = 0;
         public int TipoId { get; set; }= 0;
         public string CodigoQRBase64 { get; set; } = string.Empty;
+
+        public UserDto? usuario { get; set; }
+        public TicketTypeReadDto? TicketType { get; set; }
     }
 
     public class TicketUpdateDto

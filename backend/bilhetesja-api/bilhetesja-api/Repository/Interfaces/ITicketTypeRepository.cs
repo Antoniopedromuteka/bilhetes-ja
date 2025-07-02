@@ -6,6 +6,8 @@ namespace bilhetesja_api.Repository.Interfaces
     {
         Task<IEnumerable<TicketType>> GetAllAsync();
         Task<TicketType?> GetByIdAsync(int id);
+
+        Task<IEnumerable<TicketType?>> GetByEventId(int id);
         Task AddAsync(TicketType ticketType);
         Task<bool> SaveChangesAsync();
         void Delete(TicketType ticketType);

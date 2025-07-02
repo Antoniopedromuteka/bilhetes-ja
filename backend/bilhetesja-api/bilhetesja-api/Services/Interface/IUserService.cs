@@ -10,5 +10,7 @@ namespace bilhetesja_api.Services.Interface
         Task<bool> UpdateAsync(int id, UserUpdateDto dto);
         Task<bool> DeleteAsync(int id);
         Task<UserMeDto?> GetMeAsync();
+
+        Task UpdatePasswordAsync(int userId, UpdatePasswordDTO dto);
     }
 }

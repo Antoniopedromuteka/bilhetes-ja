@@ -20,7 +20,7 @@ import { HttpErrorResponse } from '@angular/common/http';
       >
         <div>
           <h3 class="text-2xl font-medium text-slate-700">
-            Bem-vindo(a) a BilheteJa
+            Bem-vindo(a) a BilhetesJá
           </h3>
         </div>
         <section class="space-y-4">

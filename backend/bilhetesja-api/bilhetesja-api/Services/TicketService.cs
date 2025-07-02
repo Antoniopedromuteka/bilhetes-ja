@@ -4,6 +4,7 @@
     using bilhetesja_api.DTOs.Ticket;
     using bilhetesja_api.Entities;
     using bilhetesja_api.Exceptions;
+    using bilhetesja_api.Repository;
     using bilhetesja_api.Repository.Interfaces;
     using bilhetesja_api.Services.Interface;
 
@@ -71,15 +72,32 @@
             return _mapper.Map<IEnumerable<TicketReadDto>>(tickets);
         }
 
+
         public async Task<bool> UpdateStatusAsync(int ticketId, StatusBilhete novoStatus)
         {
             var ticket = await _repository.GetByIdAsync(ticketId);
-            if (ticket == null)
-                throw new HttpException(404, "Bilhete não encontrado");
 
+            if (ticket == null)
+                throw new ArgumentException("Ticket não encontrado");
             ticket.Status = novoStatus;
+
             await _repository.UpdateAsync(ticket);
             return true;
+        }
+
+
+        public async Task<IEnumerable<TicketReadDto?>> GetByEventIdAsync(int id)
+        {
+            var tickets = await _repository.GetByEventId(id);
+            if (tickets == null) throw new HttpException(404, "Evento não encontrado");
+            return _mapper.Map<IEnumerable<TicketReadDto>>(tickets);
+        }
+
+        public async Task<IEnumerable<TicketReadDto?>> GetByUserIdAsync(int id)
+        {
+            var tickets = await _repository.GetByUserId(id);
+            if (tickets == null) throw new HttpException(404, "Evento não encontrado");
+            return _mapper.Map<IEnumerable<TicketReadDto>>(tickets);
         }
     }
 

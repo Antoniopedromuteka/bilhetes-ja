@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bilhetesja-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22283116671fa9ac843945c4a75e75e142fd057f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2afbbc5b755c4be7ddfd903d8241693ac5f5c92d")]
 [assembly: System.Reflection.AssemblyProductAttribute("bilhetesja-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bilhetesja-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

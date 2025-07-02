@@ -27,8 +27,24 @@ export const DASHBOARD_ROUTES: Routes = [
         loadComponent: () => import('../presentation/pages/dashboard/eventDash/new/new.component').then((m) => m.NewComponent)
       },
       {
-        path: 'events/update',
+        path: 'events/update/:id',
         loadComponent: () => import('../presentation/pages/dashboard/eventDash/edit/edit.component').then((m) => m.EditComponent)
+      },
+      {
+        path: 'events/:id/tickets',
+        loadComponent: () => import('../presentation/pages/dashboard/eventDash/tickets/tickets.component').then((m) => m.TicketsComponent)
+      },
+      {
+        path: 'events/:id/tickets/new',
+        loadComponent: () => import('../presentation/pages/dashboard/eventDash/tickets/newTicket/newTicket.component').then((m) => m.NewTicketComponent)
+      },
+      {
+        path: 'events/:id/tickets/update/:ticketTypeId',
+        loadComponent: () => import('../presentation/pages/dashboard/eventDash/tickets/updateTicket/updateTicket.component').then((m) => m.UpdateTicketComponent)
+      },
+      {
+        path: 'events/:id/ticketsSold',
+        loadComponent: () => import('../presentation/pages/dashboard/eventDash/ticketsSold/ticketsSold.component').then((m) => m.TicketsSoldComponent)
       },
       {
         path: 'profile',

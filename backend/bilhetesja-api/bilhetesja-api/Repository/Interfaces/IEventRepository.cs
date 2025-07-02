@@ -7,8 +7,9 @@ namespace bilhetesja_api.Repository.Interfaces
     {
         Task<IEnumerable<Event>> GetAllAsync();
         Task<Event?> GetByIdAsync(int id);
+        Task<IEnumerable<Event?>> GetByUserIdAsync(int userId);
         Task CreateAsync(Event ev);
-        Task UpdateAsync(Event ev);
+        Task<bool> UpdateAsync(Event ev);
         Task<bool> DeleteAsync(int id);
         Task<bool> SaveChangesAsync();
 

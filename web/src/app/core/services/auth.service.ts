@@ -43,7 +43,13 @@ export class AuthService implements IAuthService {
     return this.http.get(this.API_URL + '/User/me') as Observable<ListUser>;
   }
 
+  updateUser(user: { id: number, nome: string, email: string, telefone: string}): Observable<ListUser> {
+    return this.http.put(this.API_URL + '/User/'+user.id, user) as Observable<ListUser>;
+  }
 
+  updatePassword(payload: { currentPassword: string, newPassword: string, confirmPassword: string}): Observable<ListUser> {
+    return this.http.put(this.API_URL + '/User/update-password/', payload) as Observable<ListUser>;
+  }
 
 }
 
@@ -51,4 +57,5 @@ interface IAuthService {
   registerUser(registerPayload: RegisterPayload): Observable<User>;
   login(loginPayload: LoginPayload): Observable<User>;
   usersMe(): Observable<ListUser>;
+  updateUser(user: ListUser): Observable<ListUser>;
 }

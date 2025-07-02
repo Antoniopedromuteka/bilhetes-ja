@@ -67,6 +67,7 @@ namespace bilhetesja_api.Repository
             await _context.SaveChangesAsync();
         }
 
+
         public async Task<TicketType?> GetByIdWithoutRelationsAsync(int id)
         {
             return await _context.TicketTypes
@@ -90,7 +91,16 @@ namespace bilhetesja_api.Repository
             );
         }
 
+        public async Task<IEnumerable<TicketType?>> GetByEventId(int id)
+        {
 
+            return await _context.TicketTypes
+                .AsNoTracking()
+                .Include(t => t.Evento)
+                .ThenInclude(e => e!.Organizador)
+                .Where(t => t.EventoId == id)
+                .ToListAsync();
+        }
     }
 
 }

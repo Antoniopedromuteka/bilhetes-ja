@@ -7,7 +7,7 @@ import {
 import { CardEventComponent } from '../../../components/cardEvent/cardEvent.component';
 import { Category } from '../../../../domain/models/category';
 import { CategoryService } from '../../../../app/core/services/category.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { LoaderService } from '../../../../app/core/services/loader.service';
 import { EventService } from '../../../../app/core/services/event.service';
 import { Event } from '../../../../domain/models/event';
@@ -16,7 +16,7 @@ const COMPONENTS = [CardEventComponent];
 
 @Component({
   selector: 'app-category-details',
-  imports: [...COMPONENTS],
+  imports: [...COMPONENTS, RouterLink],
   template: `
     <section class="w-full nin-h-screen h-auto mt-[64px]">
       <div class="w-full h-[16rem] bg-primary py-10">
@@ -29,10 +29,13 @@ const COMPONENTS = [CardEventComponent];
     </section>
     <main class="max-w-[1280px] mx-auto h-auto w-full">
       <div class="py-10">
-        <h4 class="text-xl font-medium text-gray-400">{{ events().length }} Eventos encontrados</h4>
+        <h4 class="text-xl font-medium text-gray-400">
+          {{ events().length }} Eventos encontrados
+        </h4>
         <section class="grid grid-cols-3 gap-5 mt-10">
           @for (event of events(); track event.id) {
-            <app-card-event [event]="event" />
+
+          <app-card-event [event]="event" [routerLink]="'/event/' + event.id" />
           }
         </section>
       </div>

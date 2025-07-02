@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using bilhetesja_api.DTOs.User;
 using bilhetesja_api.Entities;
+using bilhetesja_api.Repository;
 using bilhetesja_api.Repository.Interfaces;
 using bilhetesja_api.Services.Interface;
 using FluentValidation;
@@ -93,6 +94,18 @@ namespace bilhetesja_api.Services
                     Codigo = t.CodigoQR,
                 }).ToList(),
             };
+        }
+
+        public async Task UpdatePasswordAsync(int userId, UpdatePasswordDTO dto)
+        {
+            var user = await _repository.GetByIdAsync(userId)
+                       ?? throw new Exception("Usuário não encontrado.");
+
+            if (!BCrypt.Net.BCrypt.Verify(dto.CurrentPassword, user.SenhaHash))
+                throw new Exception("Senha actual incorreta.");
+
+            user.SenhaHash = BCrypt.Net.BCrypt.HashPassword(dto.NewPassword);
+            await _repository.UpdateAsync(user);
         }
 
     }

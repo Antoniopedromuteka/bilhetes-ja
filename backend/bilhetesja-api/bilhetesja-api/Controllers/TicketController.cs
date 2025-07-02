@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace bilhetesja_api.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class TicketController : ControllerBase
@@ -33,6 +32,21 @@ namespace bilhetesja_api.Controllers
             return ticket == null ? NotFound() : Ok(ticket);
         }
 
+        [HttpGet("event/{id}")]
+        public async Task<ActionResult<TicketReadDto>> GetByEventId(int id)
+        {
+            var ticket = await _service.GetByEventIdAsync(id);
+            return ticket == null ? NotFound() : Ok(ticket);
+        }
+
+
+        [HttpGet("user/{id}")]
+        public async Task<ActionResult<TicketReadDto>> GetByUserId(int id)
+        {
+            var ticket = await _service.GetByUserIdAsync(id);
+            return ticket == null ? NotFound() : Ok(ticket);
+        }
+
         [HttpPost]
         public async Task<ActionResult<TicketReadDto>> Create(TicketCreateDto dto)
         {
@@ -54,7 +68,6 @@ namespace bilhetesja_api.Controllers
             return deleted ? NoContent() : NotFound();
         }
 
-        [Authorize(Roles = "Administrador")]
         [HttpPatch("{id}/cancel")]
         public async Task<IActionResult> Cancel(int id)
         {
@@ -62,15 +75,13 @@ namespace bilhetesja_api.Controllers
             return NoContent();
         }
 
-        [Authorize(Roles = "Administrador")]
         [HttpPatch("{id}/approve")]
         public async Task<IActionResult> Approve(int id)
         {
-            await _service.UpdateStatusAsync(id, StatusBilhete.Ativo);
+            await _service.UpdateStatusAsync(id, StatusBilhete.Utilizado);
             return NoContent();
         }
 
-        [Authorize(Roles = "Administrador")]
         [HttpPatch("{id}/status")]
         public async Task<IActionResult> UpdateStatus(int id, [FromBody] TicketStatusUpdateDto dto)
         {

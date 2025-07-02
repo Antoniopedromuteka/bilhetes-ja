@@ -10,6 +10,6 @@ namespace bilhetesja_api.Repository.Interfaces
 
         Task UpdateBalanceAsync(int id, decimal amountToAdd);
 
-        Task <int> GetOrCreateWalletIdAsync(int id);
+        Task <int> GetOrCreateWalletIdAsync(int id);    
     }
 }

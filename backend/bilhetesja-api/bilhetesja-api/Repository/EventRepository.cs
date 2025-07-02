@@ -34,10 +34,10 @@ namespace bilhetesja_api.Repository
 
         }
 
-        public async Task UpdateAsync(Event ev)
+        public async Task<bool> UpdateAsync(Event ev)
         {
             _context.Events.Update(ev);
-            await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync() > 0;
         }
 
         public async Task<bool> DeleteAsync(int id)
@@ -100,6 +100,17 @@ namespace bilhetesja_api.Repository
                 .Where(e => e.Id == eventId)
                 .Select(e => e.Nome)
                 .FirstOrDefaultAsync();
+        }
+
+        public async Task<IEnumerable<Event?>> GetByUserIdAsync(int userId)
+        {
+            return await _context.Events
+                .Include(e => e.Categoria)
+                .Include(e => e.TiposBilhetes)
+                .Include(e => e.Organizador)
+                .Include(e => e.Imagem)
+                .Where(e => e.OrganizadorId == userId)
+                .ToListAsync();
         }
     }
 

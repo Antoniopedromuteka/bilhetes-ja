@@ -26,6 +26,13 @@ namespace bilhetesja_api.Controllers
             return result == null ? NotFound() : Ok(result);
         }
 
+        [HttpGet("event/{id}")]
+        public async Task<ActionResult<TicketTypeReadDto>> GetByEvendId(int id)
+        {
+            var result = await _service.GetByEventIdAsync(id);
+            return result == null ? NotFound() : Ok(result);
+        }
+
         [HttpPost]
         public async Task<ActionResult<TicketTypeReadDto>> Create(TicketTypeCreateDto dto)
         {

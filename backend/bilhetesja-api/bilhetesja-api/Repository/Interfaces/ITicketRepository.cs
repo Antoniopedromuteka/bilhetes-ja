@@ -9,8 +9,15 @@
         Task AddAsync(Ticket ticket);
         void Delete(Ticket ticket);
         Task<bool> SaveChangesAsync();
+
+        Task<IEnumerable<Ticket?>> GetByEventId(int id);
+
+        Task<IEnumerable<Ticket?>> GetByUserId(int id);
+
         Task<IEnumerable<Ticket>> GetAllAsync(StatusBilhete? status);
         Task UpdateAsync(Ticket ticket);
+
+        Task<bool> ExistsAsync(int id);
 
     }
 

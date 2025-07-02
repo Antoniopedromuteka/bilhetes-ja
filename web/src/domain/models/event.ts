@@ -4,10 +4,11 @@ export type Event = {
   nome: string;
   categoriaId: number;
   descricao: string;
-  dataEvento: Date;
+  dataEvento: string;
   lotacaoTotal: number;
   status: number;
   local: string;
+  nomeCategoria?: string;
   categoria: {
     id: number;
     nome: string;
@@ -29,5 +30,6 @@ export type ticket = {
   preco: number;
   quantidade: number;
   eventoNome: string;
+  eventoId: number;
   event: Event
 }

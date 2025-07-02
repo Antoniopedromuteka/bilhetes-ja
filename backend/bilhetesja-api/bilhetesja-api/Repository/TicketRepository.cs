@@ -21,7 +21,9 @@
 
         public async Task<Ticket?> GetByIdAsync(int id)
         {
-            return await _context.Tickets.FindAsync(id);
+            return await _context.Tickets
+                .Include(t => t.Tipo)
+                .FirstOrDefaultAsync(t => t.Id == id);
         }
 
         public async Task AddAsync(Ticket ticket)
@@ -51,10 +53,37 @@
             return await query.ToListAsync();
         }
 
+
         public async Task UpdateAsync(Ticket ticket)
         {
-            _context.Tickets.Update(ticket);
+            _context.Entry(ticket).State = EntityState.Modified;
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<bool> ExistsAsync(int id)
+        {
+            return await _context.Tickets.AnyAsync(t => t.Id == id);
+        }
+
+
+        public async Task<IEnumerable<Ticket?>> GetByEventId(int id)
+        {
+           return await _context.Tickets
+             .AsNoTracking()
+            .Include(t => t.Tipo)
+            .Include(t => t.Usuario)
+            .Where(t => t!.Tipo!.Evento!.Id == id)
+            .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Ticket?>> GetByUserId(int id)
+        {
+            return await _context.Tickets
+                .AsNoTracking()
+                .Include(t => t.Tipo)
+                .Include(t => t.Usuario)
+                .Where(t => t.UsuarioId == id)
+                .ToListAsync();
         }
     }
 

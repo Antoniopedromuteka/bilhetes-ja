@@ -4,10 +4,9 @@ import { Event } from '../../../domain/models/event';
 
 @Component({
   selector: 'app-card-event',
-  imports: [RouterLink],
+  imports: [],
   template: `
     <section
-      [routerLink]="'/event/' + event.id"
       class="md:max-w-[410px] cursor-pointer w-full h-[372px] bg-gray-50 rounded-md flex flex-col"
     >
       <div class="w-full h-[192px] bg-black rounded-t-md"></div>
@@ -52,7 +51,6 @@ export class CardEventComponent {
   constructor() { }
 
   ngOnInit(){
-    console.log(this.event, ":::::::::");
     this.event.tiposBilhetes?.forEach((element) => {
       this.arrayPrice.set([...this.arrayPrice(), element.preco])
     })

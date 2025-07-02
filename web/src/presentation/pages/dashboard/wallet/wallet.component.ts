@@ -1,6 +1,8 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { BreadcrumbComponent } from '../../../components/breadcrumb/breadcrumb.component';
 import { FormatMoneyService } from '../../../../app/core/services/formatMoney.service';
+import { Wallet, WalletService, WalletTransaction } from '../../../../app/core/services/wallet.service';
+import { LoaderService } from '../../../../app/core/services/loader.service';
 
 const COMPONENTS = [BreadcrumbComponent];
 
@@ -41,20 +43,36 @@ const COMPONENTS = [BreadcrumbComponent];
           </div>
         </div>
         <div class="col-span-1 h-auto flex flex-col gap-3">
-          <span>0 transação</span>
+          <span>{{walletTransactions().length}} @if(walletTransactions().length > 1) {
+            transações
+          }@else {
+            transação
+          }
+          </span>
           <select
+            (change)="handleFilter($event)"
             class="bg-white p-2 rounded-md max-w-[200px] border outline-1 outline-gray-500"
           >
-            <option>Este ano</option>
-            <option>Este mês</option>
-            <option>Esta semana</option>
-            <option>Este dia</option>
+            <option value="todos">Todos</option>
+            <option value="hoje">Este dia</option>
+            <option value="esta_semana">Esta semana</option>
+            <option value="este_mes">Este mês</option>
+            <option value="este_ano">Este ano</option>
           </select>
 
           <div
-            class="bg-white min-h-48 h-auto rounded-xl flex items-center justify-center"
+            class="bg-white max-h-48 h-auto rounded-xl flex flex-col gap-3 p-5 overflow-y-auto"
           >
-            <span class="text-2xl font-medium">Sem transações</span>
+            @if(walletTransactions().length === 0){
+              <span class="text-2xl font-medium">Sem transações</span>
+            }
+            @for(item of walletTransactions(); track $index){
+              <div class="flex items-center gap-4 text-primary text-xs border-b my-1">
+                <span>{{item.descricao}}</span>
+                <span>{{formatCurrency.formatEuro(item.valor)}}</span>
+                <span>{{this.formatDate(item.data)}}</span>
+              </div>
+            }
           </div>
         </div>
       </div>
@@ -82,7 +100,7 @@ const COMPONENTS = [BreadcrumbComponent];
           <div>
             <span class="font-medium">Saldo líquido</span>
             <div>
-              <span class="text-primary font-medium text-xl">{{ formatCurrency.formatEuro(10) }}</span>
+              <span class="text-primary font-medium text-xl">{{ formatCurrency.formatEuro(wallet().balance) }}</span>
             </div>
           </div>
         </div>
@@ -91,7 +109,7 @@ const COMPONENTS = [BreadcrumbComponent];
           <div>
             <span class="font-medium">Processados</span>
             <div>
-              <span class="text-primary font-medium text-xl">{{ formatCurrency.formatEuro(10) }}</span>
+              <span class="text-primary font-medium text-xl">{{ formatCurrency.formatEuro(wallet().balance) }}</span>
             </div>
           </div>
         </div>
@@ -104,6 +122,22 @@ const COMPONENTS = [BreadcrumbComponent];
 })
 export class WalletComponent {
   formatCurrency = inject(FormatMoneyService)
+  walletService = inject(WalletService)
+  wallet = signal<Wallet>({} as Wallet)
+  loaderService = inject(LoaderService)
+  walletTransactions = signal<WalletTransaction[]>([])
+  ngOnInit() {
+    this.loaderService.show()
+    this.walletService.getBalance().subscribe((wallet) => {
+      this.wallet.set(wallet)
+    })
+
+    this.walletService.getTransactions().subscribe((transactions) => {
+      this.walletTransactions.set(transactions)
+    })
+    this.loaderService.hide()
+  }
+
   breadcrumbItems = {
     label: 'Painel',
     url: '/dashboard',
@@ -114,4 +148,24 @@ export class WalletComponent {
       },
     ],
   };
+
+  handleFilter(event: Event) {
+    this.loaderService.show()
+    const value = (event.target as HTMLSelectElement).value;
+    this.walletService.getTransactions(value).subscribe((transactions) => {
+      this.walletTransactions.set(transactions)
+    })
+    this.loaderService.hide()
+  }
+
+  formatDate(date: string) {
+    const options: Intl.DateTimeFormatOptions = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+    };
+    return new Date(date).toLocaleDateString('pt-PT', options);
+  }
 }

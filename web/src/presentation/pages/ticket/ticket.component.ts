@@ -1,5 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { QRCodeComponent } from 'angularx-qrcode';
+import { EventService } from '../../../app/core/services/event.service';
+import { ActivatedRoute } from '@angular/router';
+import { ITicket, TicketService } from '../../../app/core/services/ticket.service';
+import { Event } from '../../../domain/models/event';
+import { of, switchMap, tap } from 'rxjs';
 
 const COMPONENTS = [QRCodeComponent];
 
@@ -20,7 +25,7 @@ const COMPONENTS = [QRCodeComponent];
           ></div>
 
           <div class="flex justify-between items-center">
-            <h2 class="text-xl font-bold truncate">{{ title }}</h2>
+            <h2 class="text-xl font-bold truncate">{{ ticket()?.ticketType?.nome }}</h2>
             <span class="text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -43,33 +48,25 @@ const COMPONENTS = [QRCodeComponent];
               </svg>
             </span>
           </div>
-          <p class="mt-2 text-indigo-100 truncate">{{ description }}</p>
+          <p class="mt-2 text-indigo-100 truncate">{{ event()?.descricao }}</p>
         </div>
 
         <div class="p-6">
           <div class="grid grid-cols-2 gap-4 mb-6">
             <div class="space-y-1">
               <p class="text-gray-500 text-sm">Data</p>
-              <p class="font-semibold">{{ date }}</p>
-            </div>
-            <div class="space-y-1">
-              <p class="text-gray-500 text-sm">Horário</p>
-              <p class="font-semibold">{{ time }}</p>
+              <p class="font-semibold">{{ this.formatDate(event()?.dataEvento!) }}</p>
             </div>
             <div class="space-y-1">
               <p class="text-gray-500 text-sm">Local</p>
-              <p class="font-semibold truncate">{{ location }}</p>
-            </div>
-            <div class="space-y-1">
-              <p class="text-gray-500 text-sm">Assento</p>
-              <p class="font-semibold text-2xl">{{ seat }}</p>
+              <p class="font-semibold truncate">{{ event()?.local }}</p>
             </div>
           </div>
 
           <div class="mt-6 pt-4 border-t border-dashed border-gray-300">
-            <div class="">
+            <div class="w-full flex justify-center">
               <qrcode
-                [qrdata]="'flffk'"
+                [qrdata]="ticket()?.codigoQR ?? ''"
                 [allowEmptyString]="true"
                 [ariaLabel]="'QR Code image with the following content...'"
                 [cssClass]="'center'"
@@ -81,17 +78,21 @@ const COMPONENTS = [QRCodeComponent];
                 [imageWidth]="75"
                 [margin]="4"
                 [scale]="1"
-                [title]="'A custom title attribute'"
+                [title]="event()?.descricao"
                 [width]="300"
               ></qrcode>
             </div>
             <p class="text-center text-xs mt-2 text-gray-500">
               Apresente este ingresso na entrada
             </p>
+            <div class="w-full flex justify-center">
+              <button (click)="printTicket()" class="mt-2  cursor-pointer rounded-md max-w-[200px] p-2 w-full bg-primary text-white">
+                <span class="text-sm font-medium">Imprimir</span>
+              </button>
+            </div>
           </div>
         </div>
 
-        <!-- Recorte inferior -->
         <div
           class="absolute -top-2 left-0 right-0 h-4 flex justify-between"
           style="background-image: radial-gradient(circle at 50% 100%, white 25%, transparent 25%), radial-gradient(circle at 50% 100%, white 25%, transparent 25%); background-size: 20px 20px; background-position: 0 0, 10px 10px;"
@@ -103,12 +104,43 @@ const COMPONENTS = [QRCodeComponent];
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TicketComponent {
-  title: string = 'Título do Evento';
-  description: string = 'Descrição do evento ou ingresso';
-  date: string = '25 JUN 2025';
-  time: string = '19:30h';
-  location: string = 'Local do Evento';
-  seat: string = 'A23';
-  barcode: string = 'https://via.placeholder.com/150x50?text=Barcode';
-  logo: string = 'https://via.placeholder.com/50';
+  eventService = inject(EventService);
+  ticketService = inject(TicketService);
+  route = inject(ActivatedRoute);
+  ticket = signal<ITicket | null>(null);
+  event = signal<Event | null>(null);
+
+ ngOnInit(): void {
+  const idParam = this.route.snapshot.paramMap.get('id');
+  const id = Number(idParam);
+
+  if (isNaN(id)) return;
+
+  this.ticketService.getTicketById(id).pipe(
+    tap(ticket => {
+      if (ticket) this.ticket.set(ticket);
+    }),
+    switchMap(ticket => {
+      const eventId = ticket?.ticketType?.eventoId;
+      return eventId ? this.eventService.getEvent(eventId) : of(null);
+    })
+  ).subscribe(event => {
+    if (event) this.event.set(event);
+  });
+  }
+
+  formatDate(date: string) {
+    const options: Intl.DateTimeFormatOptions = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+    };
+    return new Date(date).toLocaleDateString('pt-PT', options);
+  }
+
+  printTicket() {
+    window.print();
+  }
 }

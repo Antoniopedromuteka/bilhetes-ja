@@ -27,6 +27,13 @@ namespace bilhetesja_api.Controllers
             return evento == null ? NotFound() : Ok(evento);
         }
 
+        [HttpGet("user/{id}")]
+        public async Task<ActionResult<EventReadDto>> GetByUserId(int id)
+        {
+            var evento = await _service.GetByUserIdAsync(id);
+            return evento == null ? NotFound() : Ok(evento);
+        }
+
         [HttpGet("category/{categoryId}")]
         public async Task<ActionResult<IEnumerable<EventReadDto>>> GetByCategory(int categoryId)
         {

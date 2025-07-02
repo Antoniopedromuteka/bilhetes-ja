@@ -5,13 +5,13 @@ import {
   inject,
   signal,
 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CardEventComponent } from '../../components/cardEvent/cardEvent.component';
 import { Event } from '../../../domain/models/event';
 import { EventService } from '../../../app/core/services/event.service';
 import { switchMap } from 'rxjs';
 
-const COMPONENTS = [CardEventComponent];
+const COMPONENTS = [CardEventComponent, RouterLink];
 
 @Component({
   selector: 'app-search',
@@ -31,7 +31,10 @@ const COMPONENTS = [CardEventComponent];
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"
         >
           @for (item of events(); track $index) {
-          <app-card-event [event]="item"></app-card-event>
+          <app-card-event
+            [event]="item"
+            [routerLink]="'/event/' + item.id"
+          ></app-card-event>
           }
         </section>
       </div>
@@ -79,6 +82,4 @@ export class SearchComponent implements OnInit {
         error: (error) => console.error('Error fetching events:', error),
       });
   }
-
-
 }

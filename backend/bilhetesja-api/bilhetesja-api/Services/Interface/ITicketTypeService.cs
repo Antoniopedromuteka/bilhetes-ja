@@ -9,6 +9,7 @@ namespace bilhetesja_api.Services.Interface
         Task<TicketTypeReadDto> CreateAsync(TicketTypeCreateDto dto);
         Task<bool> UpdateAsync(int id, TicketTypeUpdateDto dto);
         Task<bool> DeleteAsync(int id);
+        Task<IEnumerable<TicketTypeReadDto?>> GetByEventIdAsync(int id);
     }
 
 }

@@ -12,11 +12,13 @@ namespace bilhetesja_api.Services
     {
         private readonly IEventRepository _repository;
         private readonly IMapper _mapper;
+        private readonly IUserRepository _userRepository;
 
-        public EventService(IEventRepository repository, IMapper mapper)
+        public EventService(IEventRepository repository, IMapper mapper, IUserRepository userRepository)
         {
             _repository = repository;
             _mapper = mapper;
+            _userRepository = userRepository;
         }
 
         public async Task<IEnumerable<EventReadDto>> GetAllAsync()
@@ -47,11 +49,10 @@ namespace bilhetesja_api.Services
         public async Task<bool> UpdateAsync(int id, EventUpdateDto dto)
         {
             var evento = await _repository.GetByIdAsync(id);
-            if (evento == null) return false;
+            if (evento == null) throw new HttpException(404, "Evento não encontrado");
 
             _mapper.Map(dto, evento);
-            await _repository.UpdateAsync(evento);
-            return await _repository.SaveChangesAsync();
+            return await _repository.UpdateAsync(evento);
         }
 
         public async Task<bool> DeleteAsync(int id)
@@ -75,6 +76,14 @@ namespace bilhetesja_api.Services
         public async Task<IEnumerable<EventReadDto>> GetByFilterAsync(EventFilterDTO filtro)
         {
             var events = await _repository.GetByFilterAsync(filtro);
+            return _mapper.Map<IEnumerable<EventReadDto>>(events);
+        }
+
+        public async Task<IEnumerable<EventReadDto?>> GetByUserIdAsync(int userId)
+        {
+            var userExistis = await _repository.GetByUserIdAsync(userId);
+            if (userExistis == null) throw new HttpException(404, "Usuario não encontrado");
+            var events = await _repository.GetByUserIdAsync(userId);
             return _mapper.Map<IEnumerable<EventReadDto>>(events);
         }
     }

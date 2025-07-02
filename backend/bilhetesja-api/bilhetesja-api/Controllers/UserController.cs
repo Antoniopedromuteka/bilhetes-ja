@@ -1,4 +1,5 @@
 ﻿using bilhetesja_api.DTOs.User;
+using bilhetesja_api.Services;
 using bilhetesja_api.Services.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -57,6 +58,16 @@ namespace bilhetesja_api.Controllers
 
             return Ok(user);
         }
+
+        [Authorize]
+        [HttpPut("update-password")]
+        public async Task<ActionResult> UpdatePassword([FromBody] UpdatePasswordDTO dto)
+        {
+            var user = await _service.GetMeAsync();
+            await _service.UpdatePasswordAsync(user!.Id, dto);
+            return Ok(new { message = "Senha atualizada com sucesso!" });
+        }
+
     }
 
 }

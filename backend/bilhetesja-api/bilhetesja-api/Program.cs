@@ -46,6 +46,10 @@ builder.Services.AddValidatorsFromAssemblyContaining<TicketCreateDtoValidator>()
 
 builder.Services.AddScoped<IWalletRepository, WalletRepository>();
 builder.Services.AddScoped<IWalletTransactionRepository, WalletTransactionRepository>();
+
+builder.Services.AddScoped<IWalletTransactionService, WalletTransactionService>();
+builder.Services.AddScoped<IWalletService, WalletService>();
+
 builder.Services.AddScoped<ITicketRepository, TicketRepository>();
 builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
@@ -85,7 +89,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowLocalhost4200", policy =>
     {
-        policy.WithOrigins("http://localhost:4200")
+        policy.WithOrigins("http://localhost:4200", "http://192.168.146.234:4200")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
@@ -98,7 +102,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.WebHost.UseUrls("http://localhost:5000");
+builder.WebHost.UseUrls("http://192.168.146.234:5000", "http://localhost:5000");
 
 var app = builder.Build();
 app.UseCors("AllowLocalhost4200");

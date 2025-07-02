@@ -41,9 +41,9 @@ namespace bilhetesja_api.Services
         {
             var entity = await _repository.GetByIdAsync(id);
             if (entity == null) return false;
-
             _mapper.Map(dto, entity);
-            return await _repository.SaveChangesAsync();
+            await _repository.UpadteAsync(entity);
+            return true;
         }
 
         public async Task<bool> DeleteAsync(int id)
@@ -53,6 +53,12 @@ namespace bilhetesja_api.Services
 
             _repository.Delete(entity);
             return await _repository.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<TicketTypeReadDto?>> GetByEventIdAsync(int id)
+        {
+            var entity = await _repository.GetByEventId(id);
+            return _mapper.Map<IEnumerable<TicketTypeReadDto>>(entity);
         }
     }
 
